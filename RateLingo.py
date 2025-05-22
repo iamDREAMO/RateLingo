@@ -1,4 +1,6 @@
 # RateLingo: CLI-based Twi language service pricing calculator
+
+# Define services
 def get_service_rate(service):
     rates = {
         "translation": 0.25,
@@ -8,3 +10,5 @@ def get_service_rate(service):
     }
     return rates.get(service.lower())
 
+# Define wordcount
+def count_words(text):
