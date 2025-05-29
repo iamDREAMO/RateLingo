@@ -51,8 +51,7 @@ def main():
     print(f"service: {service.capitalize()}")
     print(f"Word Count: {word_count}")
     print(f"Rate per word: ${rate:.2f}")
-    print(f"Total Cost: ${totl_cost:.2f}")
-    
-    
-    
-    
+    print(f"Total Cost: ${total_cost:.2f}")
+
+if __name__ == "__main__":
+    main()
