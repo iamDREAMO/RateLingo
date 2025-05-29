@@ -32,13 +32,13 @@ cd RateLingo
 Make sure Python 3 is installed on your system. In your terminal or command prompt, run:
 
 ```bash
-python ratelingo.py
+python RateLingo.py
 ```
 
 or
 
 ```bash
-py ratelingo.py
+py RateLingo.py
 ```
 
 ### 3️⃣ Follow the Prompts
@@ -74,7 +74,7 @@ No external libraries are required. Just clone and run!
 
 ## 🌍 About
 
-**RateLingo** is developed by \[**Benedict Kofi Amofah @iamDREAMO**] as a practical tool for language professionals. Feel free to contribute, fork, or suggest improvements!
+**RateLingo** is developed by **Benedict Kofi Amofah (@iamDREAMO)** as a practical tool for language professionals. Feel free to contribute, fork, or suggest improvements!
 
 ---
 
