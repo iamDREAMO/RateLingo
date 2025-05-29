@@ -11,7 +11,7 @@ def get_service_rate(service):
     return rates.get(service.lower())
 
 
-# Wordcount per-word text
+# Word count per-word text
 def count_words(text):
     words = text.strip().split()
     return len(words)
@@ -40,7 +40,18 @@ def main():
         if not line:
             break
         lines.append(line)
+        
+    full_text = "\n".join(lines)
     
+    # Calculate Word Count and Cost
+    word_count = count_words(full_text)
+    total_cost = word_count * rate
+    
+    # Print Final Output
+    print(f"service: {service.capitalize()}")
+    print(f"Word Count: {word_count}")
+    print(f"Rate per word: ${rate:.2f}")
+    print(f"Total Cost: ${totl_cost:.2f}")
     
     
     
