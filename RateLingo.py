@@ -10,5 +10,8 @@ def get_service_rate(service):
     }
     return rates.get(service.lower())
 
+
 # Define wordcount
 def count_words(text):
+    words = text.strip().split()
+    return len(words)
