@@ -18,13 +18,13 @@
 
 ---
 
-## 🚀 HOW TO USE RateLingo
+## 🚀 How To Use RateLingo
 
 ### 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/iamDREAMO/RateLingo.git
-cd ratelingo
+cd RateLingo
 ````
 
 ### 2️⃣ Run the Application
@@ -74,11 +74,13 @@ No external libraries are required. Just clone and run!
 
 ## 🌍 About
 
-**RateLingo** is developed by \[Benedict Kofi Amofah (@iamDREAMO)] as a practical tool for language professionals. Feel free to contribute, fork, or suggest improvements!
+**RateLingo** is developed by \[**Benedict Kofi Amofah @iamDREAMO**] as a practical tool for language professionals. Feel free to contribute, fork, or suggest improvements!
 
 ---
 
-🚀 **Coming Soon**: A desktop application and web app version of RateLingo will be developed soon for enhanced user experience and broader accessibility.
+## 🚀 Coming Soon: 
+
+A desktop application and web app version of RateLingo will be developed soon for enhanced user experience and broader accessibility.
 
 
 ## 📬 License
