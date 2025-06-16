@@ -74,7 +74,7 @@ No external libraries are required. Just clone and run!
 
 ## 🌍 About
 
-**RateLingo** is developed by **Benedict Kofi Amofah (@iamDREAMO)** as a practical tool for language professionals. Feel free to contribute, fork, or suggest improvements!
+**RateLingo** is developed by **[Benedict Kofi Amofah](https://github.com/iamDREAMO)** as a practical tool for language professionals. Feel free to contribute, fork, or suggest improvements!
 
 ---
 
