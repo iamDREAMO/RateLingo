@@ -7,3 +7,9 @@ import tkinter as tk
 root = Tk()
 tk.Button(root, text = "Welcome Dreamo").grid()
 root.mainloop()
+
+# learning: Building Modern GUIs with tkinter book
+#from tkinter import *
+import tkinter
+myroot = tkinter.Tk()
+
