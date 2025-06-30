@@ -1,5 +1,2 @@
-# Test sample with Tkinter
 import tkinter
 tkinter._test()
-
-
