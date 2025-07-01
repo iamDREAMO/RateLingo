@@ -1,5 +1,5 @@
 from tkinter import *
 myroot = Tk()
-myl1 = Label(myroot, text = 'BENEDICT', width=15, height=4, underline=3, font=('Cambria', 14))
-myl1.pack()
-myroot.mainloop()
+myb1 = Button(myroot, activebackground= "Magenta2", bg = '#FFC000', text= 'DREAMO')
+myb1.pack()
+myroot.mainloop() 
