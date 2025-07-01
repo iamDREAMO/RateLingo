@@ -11,16 +11,19 @@ myroot.resizable(width = True, height = True)   # Resize option for width/height
 myroot.mainloop()
 
 
-# Lables
+# ATTRIBUTES
+
+# DIMENSIONS:
+# Borderwidth
 from tkinter import *
 
 myroot = Tk() 
-myl1 = Label(myroot, text = 'Label1', bd = 5, relief = 'groove')   # Lable feature
+myl1 = Label(myroot, text = 'Label1', bd = 5, relief = 'groove')   # borderwidth feature
 myl1.pack()
 myroot.mainloop()
 
 
-# Highlighttickness
+# Highlighttickness, padX, padY
 from tkinter import *
 
 myroot = Tk() 
@@ -48,3 +51,12 @@ myroot = Tk()
 myl1 = Label(myroot, text = 'BENEDICT', width=15, height=4, underline=3, font=('Cambria', 14))
 myl1.pack()
 myroot.mainloop()
+
+
+# COLORS:
+# Activebackground, background
+from tkinter import *
+myroot = Tk()
+myb1 = Button(myroot, activebackground= "Magenta2", bg = '#FFC000', text= 'DREAMO')
+myb1.pack()
+myroot.mainloop()  
