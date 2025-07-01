@@ -60,3 +60,11 @@ myroot = Tk()
 myb1 = Button(myroot, activebackground= "Magenta2", bg = '#FFC000', text= 'DREAMO')
 myb1.pack()
 myroot.mainloop()  
+
+
+# Activeforeground, foreground
+from tkinter import *
+myroot = Tk()
+myb1 = Button(myroot, activeforeground= 'Cyan2', fg= 'Salmon', text= 'GHANA')
+myb1.pack()
+myroot.mainloop()
