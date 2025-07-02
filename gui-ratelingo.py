@@ -121,3 +121,12 @@ for loop in myfont_list:
     print(loop,end = ',')
     
 myroot.mainloop()
+
+# Using tuple to access the font family
+from tkinter import *
+from tkinter.font import Font
+myroot = Tk()
+
+myl1 = Label(myroot, text = 'DREAMO', font = ('Arial', '18', 'bold roman underline'))
+myl1.pack()
+myroot.mainloop()
