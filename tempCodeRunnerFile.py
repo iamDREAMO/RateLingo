@@ -1,7 +1,9 @@
 from tkinter import *
+from tkinter.font import Font
 myroot = Tk()
-str1 = StringVar()
-mye1 = Entry(myroot, selectbackground='OliveDrab1', selectforeground= 'Deep Pink', textvariable= str1)
-mye1.pack()
-str1.set('TREDE')
+
+myfont1 = Font(family= 'Helvetica', size= 14, weight='bold', underline= 0, slant = 'roman', overstrike= 0)
+myl1= Label(myroot, text = 'BENEDICT', font = myfont1)
+myl1.pack()
+
 myroot.mainloop()
