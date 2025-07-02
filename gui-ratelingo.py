@@ -106,7 +106,18 @@ myroot = Tk()
 
 myfont1 = Font(family= 'Helvetica', size= 14, weight='bold', underline= 0, slant = 'roman', overstrike= 0)
 myl1= Label(myroot, text = 'BENEDICT', font = myfont1)
-myl1.pack()
+myl1.pack() # for displaying the label
 
+myroot.mainloop() # display the window until we press the close button (x)
+ 
+
+# Viewing the Font family
+from tkinter import * # Importing module
+from tkinter import font
+myroot = Tk() # window creation and initialize the interpreter
+
+myfont_list = list(font.families())
+for loop in myfont_list:
+    print(loop,end = ',')
+    
 myroot.mainloop()
-
