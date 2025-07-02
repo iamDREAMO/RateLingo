@@ -77,6 +77,7 @@ myb1 = Button(myroot, state = 'disabled', text = 'BONO', disabledforeground= 're
 myb1.pack()
 myroot.mainloop()
 
+
 # Highlightbackground
 from tkinter import *
 myroot = Tk()
@@ -85,5 +86,15 @@ mye1.pack(padx= 5, pady=5)
 mye2 = Entry(myroot)
 mye2.pack()
 mye2.focus()
+myroot.mainloop()
+
+
+# Selectbackground, selectforeground
+from tkinter import *
+myroot = Tk()
+str1 = StringVar()
+mye1 = Entry(myroot, selectbackground='OliveDrab1', selectforeground= 'Deep Pink', textvariable= str1)
+mye1.pack()
+str1.set('TREDE')
 myroot.mainloop()
 
