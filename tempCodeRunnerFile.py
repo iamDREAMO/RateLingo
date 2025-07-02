@@ -1,8 +1,15 @@
-from tkinter import *
-myroot = Tk()
-myroot.geometry('200x200')
+from tkinter import * # type: ignore
 
-# Choose anchor and code remains the same
-myl1 = Label(myroot, text= 'KOTEI', anchor= CENTER, font =('Arila', '20', 'bold roman'), bd = 2, relief = 'raised', width = 10, height = 6)
-myl1.pack()
+myroot = Tk()
+myroot.geometry('300x200')
+myb1 = Button(myroot, text= 'DREAMO', font = ('Roboto', 12), relief= FLAT, bd =5)
+myb1.pack()
+myb2 = Button(myroot, text= 'DREAMO', font = ('Roboto', 12), relief= GROOVE, bd =5)
+myb2.pack()
+myb3 = Button(myroot, text= 'DREAMO', font = ('Roboto', 12), relief= SUNKEN, bd =5)
+myb3.pack()
+myb4 = Button(myroot, text= 'DREAMO', font = ('Roboto', 12), relief= RAISED, bd =5)
+myb4.pack()
+myb5 = Button(myroot, text= 'DREAMO', font = ('Roboto', 12), relief= RIDGE, bd =5)
+myb5.pack()
 myroot.mainloop()
