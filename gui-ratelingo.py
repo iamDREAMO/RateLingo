@@ -159,3 +159,19 @@ myb4.pack()
 myb5 = Button(myroot, text= 'DREAMO', font = ('Roboto', 12), relief= RIDGE, bd =5)
 myb5.pack()
 myroot.mainloop()
+
+
+# BITMAPS
+from tkinter import * 
+
+myroot = Tk()
+myroot.geometry('300x350')
+myb1 = Button(myroot, text = 'TREDE', relief= RIDGE, bitmap = 'error', bd = 4)
+myb1.pack()
+myb2 = Button(myroot, text = 'TREDE', relief= RIDGE, bitmap = 'info', bd = 4)
+myb2.pack()
+myb3 = Button(myroot, text = 'TREDE', relief= RIDGE, bitmap = 'warning', bd = 4)
+myb3.pack()
+myb4 = Button(myroot, text = 'TREDE', relief= RIDGE, bitmap = 'question', bd = 4)
+myb4.pack()
+myroot.mainloop()
