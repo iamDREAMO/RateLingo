@@ -178,7 +178,7 @@ myroot.mainloop()
 
 
 # CURSORS
-from tkinter import *
+from tkinter import * # type: ignore
 
 myroot = Tk()
 myroot.geometry('250x250')
@@ -190,4 +190,25 @@ myb6 = Button(myroot, text = 'ADUSEI', relief= RAISED, cursor= 'spider', bd = 4)
 myb6.pack()
 myb7 = Button(myroot, text = 'ADUSEI', relief= RAISED, cursor= 'star', bd = 4)
 myb7.pack()
+myroot.mainloop()
+
+
+# Python Tkinter Geometry Management
+
+# pack() options: fill, expand, side
+from tkinter import * # type: ignore
+myroot = Tk()
+myroot.geometry('300x300')
+myb1 = Button(myroot, text = 'YAW', fg= 'pink', bg= 'blue')
+myb1.pack(fill= NONE)
+myb2 = Button(myroot, text = 'YAW', fg= 'pink', bg= 'blue')
+myb2.pack(fill = X, padx = 10, pady = 10)
+myb3 = Button(myroot, text = 'YAW', fg= 'pink', bg= 'blue')
+myb3.pack(side = LEFT, fill = Y, padx = 10, pady = 10)
+myb4 = Button(myroot, text = 'YAW', fg= 'pink', bg= 'blue')
+myb4.pack(side = TOP, fill = X, padx = 10, pady = 10 )
+myb5 = Button(myroot, text = 'YAW', fg= 'pink', bg= 'blue')
+myb5.pack(side= BOTTOM, fill = X, padx = 10, pady= 10)
+myb6 = Button(myroot, text = 'YAW', fg= 'pink', bg= 'blue')
+myb6.pack(side= RIGHT, fill= BOTH, expand= 1, padx= 10, pady= 10)
 myroot.mainloop()
