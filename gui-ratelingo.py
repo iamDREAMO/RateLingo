@@ -162,7 +162,7 @@ myroot.mainloop()
 
 
 # BITMAPS
-from tkinter import * 
+from tkinter import *  # type: ignore
 
 myroot = Tk()
 myroot.geometry('300x350')
@@ -174,4 +174,20 @@ myb3 = Button(myroot, text = 'TREDE', relief= RIDGE, bitmap = 'warning', bd = 4)
 myb3.pack()
 myb4 = Button(myroot, text = 'TREDE', relief= RIDGE, bitmap = 'question', bd = 4)
 myb4.pack()
+myroot.mainloop()
+
+
+# CURSORS
+from tkinter import *
+
+myroot = Tk()
+myroot.geometry('250x250')
+myb4 = Button(myroot, text = 'ADUSEI', relief= RAISED, cursor= 'arrow', bd = 4)
+myb4.pack()
+myb5 = Button(myroot, text = 'ADUSEI', relief= RAISED, cursor= 'cross', bd = 4)
+myb5.pack()
+myb6 = Button(myroot, text = 'ADUSEI', relief= RAISED, cursor= 'spider', bd = 4)
+myb6.pack()
+myb7 = Button(myroot, text = 'ADUSEI', relief= RAISED, cursor= 'star', bd = 4)
+myb7.pack()
 myroot.mainloop()
