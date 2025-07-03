@@ -195,7 +195,7 @@ myroot.mainloop()
 
 # Python Tkinter Geometry Management
 
-# pack() options: fill, expand, side
+# pack() options: fill, expand, side (FES)
 from tkinter import * # type: ignore
 myroot = Tk()
 myroot.geometry('300x300')
@@ -212,3 +212,28 @@ myb5.pack(side= BOTTOM, fill = X, padx = 10, pady= 10)
 myb6 = Button(myroot, text = 'YAW', fg= 'pink', bg= 'blue')
 myb6.pack(side= RIGHT, fill= BOTH, expand= 1, padx= 10, pady= 10)
 myroot.mainloop()
+
+
+# grid() options : CCPPIIRRS (column,columnspan,padx,pady,ipadx,ipady,row,rowspan,sticky)
+from tkinter import *
+myroot = Tk()
+
+mybtn_col = Button(myroot, text= 'It is column no. 4')
+mybtn_col.grid(row= 0, column=4)
+
+mybtn_colspan = Button(myroot, text= 'The columnspan is 4')
+mybtn_colspan.grid(row= 1, columnspan=4)
+
+mybtn_padx = Button(myroot, text='padx of 5 from outside widget')
+mybtn_padx.grid(row=2, padx=5)
+
+mybtn_pady =Button(myroot, text='pady of 10 from outside the  widget')
+mybtn_pady.grid(row=3, pady=5)
+
+mybtn_ipadx = Button(myroot, )
+
+
+
+myroot.mainloop()
+
+
