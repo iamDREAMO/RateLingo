@@ -236,6 +236,15 @@ mybtn_ipadx.grid(row= 4, ipadx=10)
 mybtn_ipady = Button(myroot,text= 'ipadx of 5 from inside wodget border')
 mybtn_ipady.grid(row= 5, ipady=10)
 
+mybtn_row = Button(myroot, text= 'It is Row No.7')
+mybtn_row.grid(row=7)
+
+mybtn_rowspan = Button(myroot, text= 'It is Rowspan of 3')
+mybtn_rowspan.grid(row= 8, rowspan=3)
+
+mybtn_sticky = Button(myroot, text= 'Hey! I am at North-West')
+mybtn_sticky.grid(sticky=NE)
+
 myroot.mainloop()
 
 
