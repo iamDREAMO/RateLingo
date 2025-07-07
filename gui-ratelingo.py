@@ -215,7 +215,7 @@ myroot.mainloop()
 
 
 # grid() options : CCPPIIRRS (column,columnspan,padx,pady,ipadx,ipady,row,rowspan,sticky)
-from tkinter import *
+from tkinter import * # type: ignore
 myroot = Tk()
 
 mybtn_col = Button(myroot, text= 'It is column no. 4')
@@ -228,11 +228,13 @@ mybtn_padx = Button(myroot, text='padx of 5 from outside widget')
 mybtn_padx.grid(row=2, padx=5)
 
 mybtn_pady =Button(myroot, text='pady of 10 from outside the  widget')
-mybtn_pady.grid(row=3, pady=5)
+mybtn_pady.grid(row=3, pady=10)
 
-mybtn_ipadx = Button(myroot, )
+mybtn_ipadx = Button(myroot,text= 'ipadx of 5 from inside wodget border')
+mybtn_ipadx.grid(row= 4, ipadx=10)
 
-
+mybtn_ipady = Button(myroot,text= 'ipadx of 5 from inside wodget border')
+mybtn_ipady.grid(row= 5, ipady=10)
 
 myroot.mainloop()
 
