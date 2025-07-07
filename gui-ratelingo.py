@@ -265,4 +265,16 @@ mybtn_relheight.place(relheight=0.7)
 mybtn_relwidth = Button(myroot, text='relwidth of 0.4')
 mybtn_relwidth.place(relwidth=0.4)
 
+mybtn_relx = Button(myroot, text='relx of 0.5')
+mybtn_relx.place(relx=0.5)
+
+mybtn_rely =Button(myroot, text='rely of 0.8')
+mybtn_rely.place(rely=0.8)
+
+mybtn_x = Button(myroot, text='X = 500px')
+mybtn_x.place(x=500)
+
+mybtn_y = Button(myroot, text='Y = 520px')
+mybtn_y.place(y=500)
+
 myroot.mainloop()
