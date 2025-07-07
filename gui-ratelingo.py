@@ -278,3 +278,14 @@ mybtn_y = Button(myroot, text='Y = 520px')
 mybtn_y.place(y=500)
 
 myroot.mainloop()
+
+
+# Geometry Method In Tkinter
+from tkinter import *
+
+myroot = Tk()   # Creating blank tkinter widow
+myroot.geometry('300x150')
+
+mybtn = Button(myroot, text= 'OWUSU')
+mybtn.pack(side= TOP, padx = 5, pady = 5)
+myroot.mainloop()
