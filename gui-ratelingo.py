@@ -413,3 +413,17 @@ my_entry2.pack()
 my_entry2.configure(state= 'readonly')
 
 myroot.mainloop()
+
+
+# GUI Creation Using Classes And Objects
+from tkinter import *
+from tkinter import messagebox
+myroot = Tk()
+
+def mydisplay():
+    messagebox.showinfo('Message', 'Hey Kofi!')
+    
+mybtn = Button(myroot, text= 'Display', font= ('Cambria', 13, 'bold',), command= mydisplay)
+mybtn.pack(padx= 20, pady= 30)
+myroot.mainloop()
+
