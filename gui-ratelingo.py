@@ -490,8 +490,8 @@ class MyBtnImage(Frame):
         self.root = root
         self.myphoto = PhotoImage(file = 'Add-icon.png')
         def myclick():
-            self.mybtn1['state'] = DISABLED
-        self.mybtn1 = Button(self.root, image = self.myphoto, height= 200, command= myclick)
+            self.mybtn1['state'] = DISABLED # Button text is covered by image.
+        self.mybtn1 = Button(self.root, image = self.myphoto, command= myclick)
         self.mybtn1.pack(padx = 10, pady = 10)
         
 if __name__ == '__main__':
@@ -499,4 +499,29 @@ if __name__ == '__main__':
     myobj = MyBtnImage(myroot)
     myroot.title('Image using Button')
     myroot.geometry('300x300')
+    myroot.mainloop()
+    
+
+# Displaying both button image/text
+from tkinter import *
+
+class MyBtnTextWithImage(Frame):
+    def __init__(self, root = None):
+        Frame.__init__(self, root)
+        self.root = root
+        self.myphoto = PhotoImage(file = 'Add-icon2.png')
+        self.mybtn1 = Button(self.root, image = self.myphoto, text = 'Hey!', compound=LEFT)
+        self.mybtn1.pack(padx= 10, pady= 10)
+        self.mybtn2 = Button(self.root, image = self.myphoto, text='Hey!', compound= RIGHT)
+        self.mybtn2.pack(padx= 10, pady=10)
+        self.mybtn3 = Button(self.root, image = self.myphoto, text= 'Hey!', compound=TOP)
+        self.mybtn3.pack(padx=10, pady=10)
+        self.mybtn4 = Button(self.root, image = self.myphoto, text= 'Hey!', compound= BOTTOM)
+        self.mybtn4.pack(padx= 10, pady=10)
+        
+if __name__ == '__main__':
+    myroot = Tk()
+    myobj = MyBtnTextWithImage(myroot)
+    myroot.title('Image Using Button')
+    myroot.geometry('400x300')
     myroot.mainloop()
