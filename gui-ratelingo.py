@@ -249,7 +249,7 @@ myroot.mainloop()
 
 
 # place()
-from tkinter import *
+from tkinter import * # type: ignore
 myroot = Tk() 
 myroot.geometry('500x500')
 
@@ -281,7 +281,7 @@ myroot.mainloop()
 
 
 # Geometry Method In Tkinter
-from tkinter import *
+from tkinter import * # type: ignore
 
 myroot = Tk()   # Creating blank tkinter widow
 myroot.geometry('300x150')
@@ -291,7 +291,7 @@ mybtn.pack(side= TOP, padx = 5, pady = 5)
 myroot.mainloop()
 
 # Changing the position of the window
-from tkinter import *
+from tkinter import * # type: ignore
 
 myroot = Tk()   # Creating blank tkinter widow
 myroot.geometry('300x150+400+400')
@@ -304,11 +304,11 @@ myroot.mainloop()
 # Inbuilt Variable Classes
 
 # SringVar()
-from tkinter import *
+from tkinter import * # type: ignore
 myroot = Tk()   # creating an oblject of Tk class -- object of window
 
 myroot.geometry('200x200') # window can be resized to any size until we use root.resizeable
-myroot.resizable(0,0)   # window size is fixed (cannot be larger/smaller)
+myroot.resizable(0,0)   # type: ignore # window size is fixed (cannot be larger/smaller)
 
 mystr = StringVar() # S1
 print(type(mystr))  # S2
@@ -327,7 +327,7 @@ myroot.mainloop()
 
 
 # BooleanVar()
-from tkinter import *
+from tkinter import * # type: ignore
 
 myroot = Tk()
 myroot.geometry('300x200')
@@ -351,10 +351,10 @@ myroot.mainloop()
 
 
 # IntVar()
-from tkinter import *
+from tkinter import * # type: ignore
 myroot = Tk()
 myroot.geometry('300x300')
-myroot.resizable(0,0)
+myroot.resizable(0,0) # type: ignore
 
 myint = IntVar()
 myint1 = IntVar()
@@ -367,11 +367,11 @@ my_entry1 = Entry(myroot, font = ('Cambria', 13), textvariable= myint1)
 my_entry1.pack()
 
 
-def mydisplay():
+def mydisplay(): # type: ignore
     mydata1 = myint.get()
     mydata2 = myint1.get()
     mydata3 = mydata1 * mydata2
-    myint2.set(mydata3)
+    myint2.set(mydata3) # type: ignore
     
 my_btn = Button(myroot, font = ('Cambria', 13, 'bold',), text= 'Multiply', command= mydisplay)
 my_btn.pack()
@@ -383,10 +383,10 @@ myroot.mainloop()
 
 
 # DoubleVar()
-from tkinter import *
+from tkinter import * # type: ignore
 myroot = Tk()
 myroot.geometry('300x300')
-myroot.resizable(0,0)
+myroot.resizable(0,0) # type: ignore
 
 myint = DoubleVar()
 myint1 = DoubleVar()
@@ -399,11 +399,11 @@ my_entry1 = Entry(myroot, font= ('Cambria', 13, 'bold',), textvariable=myint1)
 my_entry1.pack()
 
 
-def mydisplay():
+def mydisplay(): # type: ignore
     mydata1 = myint.get()
     mydata2 = myint1.get()
     mydata3 = mydata1 - mydata2
-    myint2.set(mydata3)
+    myint2.set(mydata3) # type: ignore
     
 my_btn = Button(myroot, font= ('Cambria', 13, 'bold',), text= 'Difference', command= mydisplay)
 my_btn.pack()
@@ -416,7 +416,7 @@ myroot.mainloop()
 
 
 # GUI Creation Using Classes And Objects
-from tkinter import *
+from tkinter import * # type: ignore
 from tkinter import messagebox
 myroot = Tk()
 
@@ -428,7 +428,7 @@ mybtn.pack(padx= 20, pady= 30)
 myroot.mainloop()
 
 # Using OOP techniques to address more widgets integration
-from tkinter import *
+from tkinter import * # type: ignore
 from tkinter import messagebox
 
 class MyBtn(Tk):
@@ -448,7 +448,7 @@ if __name__ == '__main__':
 # Getting Insights of Button Widgets in Tkinter
 
 # tkinter Button Widget
-from tkinter import *
+from tkinter import * # type: ignore
 from tkinter import messagebox
 
 class MyJustify(Tk):
@@ -482,7 +482,7 @@ if __name__ == "__main__":
     
 
 # Image and State- button insights
-from tkinter import *
+from tkinter import * # type: ignore
 
 class MyBtnImage(Frame):
     def __init__(self, root = None):
@@ -503,7 +503,7 @@ if __name__ == '__main__':
     
 
 # Displaying both button image/text
-from tkinter import *
+from tkinter import * # type: ignore
 
 class MyBtnTextWithImage(Frame):
     def __init__(self, root = None):
@@ -525,3 +525,29 @@ if __name__ == '__main__':
     myroot.title('Image Using Button')
     myroot.geometry('400x300')
     myroot.mainloop()
+    
+# Events and Bindings
+from tkinter import *
+class MyleftRightMouseClick(Tk):
+    def __init__(self):
+        super().__init__()
+        self.title('Button Left and Right click')
+        
+        def mycall(event):
+            print('Left Clicked')
+            
+        def mycallme(event):
+            print('Right Clicked')
+            
+        self.myb1 = Button(self, text = 'LeftClick', font = ('Cambria', 14))
+        self.myb1.bind('<Button-1>', mycall) # Left click
+        self.myb1.pack(pady= 10) # for displaying the button
+        
+        self.myb2 = Button(self, text = 'RightClick', font= ('Cambria', 14))
+        self.myb2.bind('<Button-3>', mycallme) # Right Click
+        self.myb2.pack(pady=10) # for displaying the button
+        
+if __name__ == '__main__':
+    myroot = MyleftRightMouseClick()
+    myroot.geometry('400x250')
+    myroot.mainloop() 

@@ -1,22 +1,24 @@
 from tkinter import *
-
-class MyBtnTextWithImage(Frame):
-    def __init__(self, root = None):
-        Frame.__init__(self, root)
-        self.root = root
-        self.myphoto = PhotoImage(file = 'Add-icon2.png')
-        self.mybtn1 = Button(self.root, image = self.myphoto, text = 'Hey!', compound=LEFT)
-        self.mybtn1.pack(padx= 10, pady= 10)
-        self.mybtn2 = Button(self.root, image = self.myphoto, text='Hey!', compound= RIGHT)
-        self.mybtn2.pack(padx= 10, pady=10)
-        self.mybtn3 = Button(self.root, image = self.myphoto, text= 'Hey!', compound=TOP)
-        self.mybtn3.pack(padx=10, pady=10)
-        self.mybtn4 = Button(self.root, image = self.myphoto, text= 'Hey!', compound= BOTTOM)
-        self.mybtn4.pack(padx= 10, pady=10)
+class MyleftRightMouseClick(Tk):
+    def __init__(self):
+        super().__init__()
+        self.title('Button Left and Right click')
+        
+        def mycall(event):
+            print('Left Clicked')
+            
+        def mycallme(event):
+            print('Right Clicked')
+            
+        self.myb1 = Button(self, text = 'LeftClick', font = ('Cambria', 14))
+        self.myb1.bind('<Button-1>', mycall) # Left click
+        self.myb1.pack(pady= 10) # for displaying the button
+        
+        self.myb2 = Button(self, text = 'RightClick', font= ('Cambria', 14))
+        self.myb2.bind('<Button-3>', mycallme) # Right Click
+        self.myb2.pack(pady=10) # for displaying the button
         
 if __name__ == '__main__':
-    myroot = Tk()
-    myobj = MyBtnTextWithImage(myroot)
-    myroot.title('Image Using Button')
-    myroot.geometry('400x300')
-    myroot.mainloop()
+    myroot = MyleftRightMouseClick()
+    myroot.geometry('400x250')
+    myroot.mainloop() 
