@@ -551,3 +551,59 @@ if __name__ == '__main__':
     myroot = MyleftRightMouseClick()
     myroot.geometry('400x250')
     myroot.mainloop() 
+    
+# Displaying message in cmd when a button is interacted
+from tkinter import *
+myroot = Tk() # creating the object of the Tk Class
+
+myroot.geometry('250x100') # resizable to any size
+myroot.resizable(0,0) # fixed window size
+
+myroot.title('Event handling through Cmd prompt')
+
+def mydisplay():
+    print('Clicked !!!')
+    
+mytk_button1 = Button(myroot, text= 'Login', font = ('Cambri', 15, 'bold'), fg='Magenta', command= mydisplay)
+mytk_button1.pack()
+myroot.mainloop()
+
+# Event handling through config() method
+from tkinter import *
+
+myroot = Tk() # creating an object of the Tk class -- object window
+myroot.geometry('300x200')
+myroot.resizable(0,0)
+
+def myshow1():
+    myroot.configure(background= 'Black')
+    
+mytk_button1 = Button(myroot, text= 'Backgorund colour change', font=('Cambria', 15, 'bold'), fg ='Cyan')
+mytk_button1.config(command=myshow1)
+mytk_button1.pack()
+
+myroot.mainloop()
+
+# Event handling using the "bind" method
+from tkinter import *
+myroot = Tk()
+myroot.geometry('200x200')
+myroot.resizable(0,0)
+
+def myshow1(e):
+    myroot.configure(background= 'LightBlue')
+    
+def myshow2(e):
+    myroot.configure(background='LightGreen')
+    
+def myshow3(e):
+    myroot.configure(background= 'LightYellow')
+    
+mytk_btn1 = Button(myroot, text = 'Background color', font=('Cambria', 14, 'bold'), fg= 'Pink')
+
+mytk_btn1.bind('<Button-1>', myshow1)  # Left key of mouse
+mytk_btn1.bind('<Button-2>', myshow2)  # Wheel Key of mouse
+mytk_btn1.bind('<Button-3>', myshow3)  # Right Key of mouse
+mytk_btn1.pack()
+
+myroot.mainloop()
