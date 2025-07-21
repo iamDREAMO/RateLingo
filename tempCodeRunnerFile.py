@@ -1,16 +1,18 @@
 from tkinter import *
 myroot =Tk()
+myroot.geometry('200x200')
+def myselected():
+    mychk1.config(state = NORMAL)
+    
+def mydisabled():
+    mychk1.config(state = DISABLED)
+    
+mybtn1 = Button(myroot, text= 'Normal', command=myselected)
+mybtn1.place(x=50, y=50)
+mybtn2 = Button(myroot, text= 'Disabled', command=mydisabled)
+mybtn2.place(x= 50, y= 100)
 
-myon_image = PhotoImage(width=50, height=25)
-myoff_image = PhotoImage(width=50, height=25)
-myon_image.put('LightGreen', to=(0, 0,24, 24)) # put row formatted colors to image starting from position TO
-myoff_image.put(('Red',), to=(25, 0 , 49, 24))
+mychk1 = Checkbutton(myroot, text = 'Checkbutton')
+mychk1.place(x=100, y=150)
 
-myval1 = IntVar(value=0)
-myval2 = IntVar(value=1)
-cb1 = Checkbutton(myroot, image= myoff_image, selectimage=myon_image, indicatoron=False, onvalue=1, offvalue=0, variable=myval1)
-cb2 = Checkbutton(myroot, image=myoff_image, selectimage=myon_image, indicatoron=False, onvalue=1, offvalue=0, variable=myval2)
-cb1.pack(padx=10, pady=10)
-cb2.pack(padx=10, pady=10)
-
-myroot.mainloop()
+myroot.mainloop() 
