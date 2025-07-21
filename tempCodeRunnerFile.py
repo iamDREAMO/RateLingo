@@ -1,18 +1,32 @@
 from tkinter import *
 myroot =Tk()
-myroot.geometry('200x200')
-def myselected():
-    mychk1.config(state = NORMAL)
-    
-def mydisabled():
-    mychk1.config(state = DISABLED)
-    
-mybtn1 = Button(myroot, text= 'Normal', command=myselected)
-mybtn1.place(x=50, y=50)
-mybtn2 = Button(myroot, text= 'Disabled', command=mydisabled)
-mybtn2.place(x= 50, y= 100)
+myroot.geometry('350x250')
+myroot.title('Checkbutton Widget')
 
-mychk1 = Checkbutton(myroot, text = 'Checkbutton')
-mychk1.place(x=100, y=150)
+mynum1 = IntVar()
+mynum2 = IntVar()
+mys1 = StringVar()
 
-myroot.mainloop() 
+def mydatainsertion():
+    if mynum1.get() == 1 and mynum2.get() == 0: # read status of checkbutton
+        mys1.set('DREAMO') # setting the value to  the  Entry widget
+        
+    if mynum1.get() == 0 and mynum2.get() == 1:
+        mys1.set('Ben.COM')
+        
+    if mynum1.get() == 1 and mynum2.get() == 1:
+        mys1.set('I am there no matter what!')
+        
+    if mynum1.get() == 0 and mynum2.get() == 0:
+        mys1.set('I want to see both')
+        
+myc1 = Checkbutton(myroot, variable= mynum1, font = ('Cambria', 14, 'bold'), text='DREAMO', command=mydatainsertion)
+myc1.pack()
+
+myc2 = Checkbutton(myroot, variable= mynum2, font=('Cambria', 14, 'bold'), text='Ben.COM', command=mydatainsertion)
+myc2.pack()
+
+mye1 = Entry(myroot, font= ('Cambria', 14), textvariable=mys1)
+mye1.pack()
+
+myroot.mainloop()
