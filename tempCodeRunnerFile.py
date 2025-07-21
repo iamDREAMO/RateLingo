@@ -1,32 +1,15 @@
 from tkinter import *
-myroot =Tk()
-myroot.geometry('350x250')
-myroot.title('Checkbutton Widget')
+myroot = Tk()
 
-mynum1 = IntVar()
-mynum2 = IntVar()
-mys1 = StringVar()
+myon_image = PhotoImage(width=50, height=25)
+myoff_image = PhotoImage(width=50, height=25)
+myon_image.put(('Brown'), to=(0, 0 , 24, 24)) # put row formatted colors to image starting from position TO
+myoff_image.put(('Red',), to=(0,0,24,24))
 
-def mydatainsertion():
-    if mynum1.get() == 1 and mynum2.get() == 0: # read status of checkbutton
-        mys1.set('DREAMO') # setting the value to  the  Entry widget
-        
-    if mynum1.get() == 0 and mynum2.get() == 1:
-        mys1.set('Ben.COM')
-        
-    if mynum1.get() == 1 and mynum2.get() == 1:
-        mys1.set('I am there no matter what!')
-        
-    if mynum1.get() == 0 and mynum2.get() == 0:
-        mys1.set('I want to see both')
-        
-myc1 = Checkbutton(myroot, variable= mynum1, font = ('Cambria', 14, 'bold'), text='DREAMO', command=mydatainsertion)
-myc1.pack()
-
-myc2 = Checkbutton(myroot, variable= mynum2, font=('Cambria', 14, 'bold'), text='Ben.COM', command=mydatainsertion)
-myc2.pack()
-
-mye1 = Entry(myroot, font= ('Cambria', 14), textvariable=mys1)
-mye1.pack()
+myrbvar = IntVar(value=1)
+myrb1 = Radiobutton(myroot, variable=myrbvar, value=0, bd=0, text='RadioButton1', compound='left', indicatoron=False, image=myoff_image, selectimage=myon_image)
+myrb2 = Radiobutton(myroot, variable=myrbvar, value=1, bd=0, text='Radiobutton2', compound='left', indicatoron=False, image=myoff_image, selectimage=myon_image)
+myrb1.pack(padx=10, pady=10)
+myrb2.pack(padx=10, pady=10)
 
 myroot.mainloop()

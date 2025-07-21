@@ -778,3 +778,47 @@ mye1.pack()
 
 myroot.mainloop()
 
+
+# tkinter Radiobutton Widget
+from tkinter import *
+myroot = Tk()
+myroot.geometry('200x200')
+
+COLOR1 = 'Cyan'
+COLOR2 = 'Magenta'
+
+def mydisplay():
+    if myi1.get() == 1:
+        myroot.configure(bg= COLOR1)
+    elif myi1.get() == 2:
+        myroot.configure(bg = COLOR2)
+        
+myi1 =IntVar()
+myr1 = Radiobutton(myroot, text = COLOR1, value= 1, variable=myi1)
+myr1.pack()
+
+myr2 = Radiobutton(myroot, text= COLOR2, value= 2, variable=myi1)
+myr2.pack()
+
+mybtn = Button(myroot, text= 'Background_Click', command=mydisplay)
+mybtn.pack()
+
+myroot.mainloop()
+
+
+# display image to a radiobutton
+from tkinter import *
+myroot = Tk()
+
+myon_image = PhotoImage(width=50, height=25)
+myoff_image = PhotoImage(width=50, height=25)
+myon_image.put(('Brown'), to=(0, 0 , 24, 24)) # put row formatted colors to image starting from position TO
+myoff_image.put(('Red',), to=(0,0,24,24))
+
+myrbvar = IntVar(value=1)
+myrb1 = Radiobutton(myroot, variable=myrbvar, value=0, bd=0, text='RadioButton1', compound='left', indicatoron=False, image=myoff_image, selectimage=myon_image)
+myrb2 = Radiobutton(myroot, variable=myrbvar, value=1, bd=0, text='Radiobutton2', compound='left', indicatoron=False, image=myoff_image, selectimage=myon_image)
+myrb1.pack(padx=10, pady=10)
+myrb2.pack(padx=10, pady=10)
+
+myroot.mainloop()
