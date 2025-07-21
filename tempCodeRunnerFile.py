@@ -1,20 +1,22 @@
 from tkinter import *
-myroot = Tk()
-myroot.geometry('200x200')
-myroot.resizable(0,0)
+from tkinter.ttk import *
 
-num = 1
-def mydisplay(e):
-    global num
-    num = num + 1
-    if num%2 == 0:
-        myroot.configure(background='LightBlue')
+myroot =Tk()
+myroot.geometry('200x200')
+myroot.title('CheckButton Widget')
+
+def myget():
+    if i2.get() == 'Check':
+        s1.set('Checked')
     else:
-        myroot.configure(background='Brown')
+        s1.set('Unchecked')
         
-mybtn1 = Button(myroot, text= 'Click Here!!!', font=('Cambria', 15, 'bold'))
-mybtn1.bind('<Button>', mydisplay) # on mouse pressing button
-mybtn1.bind('<ButtonRelease>', mydisplay) # on mouse releasing button
-mybtn1.pack()
+i2 = StringVar()
+myc2 = Checkbutton(myroot, text= 'Check/Uncheck', variable = i2, offvalue= 'Uncheck', onvalue= 'Check', command= myget)
+myc2.pack()
+
+s1 = StringVar()
+mye1 = Entry(myroot, font= ('Cambria', 14, 'bold'), textvariable= s1)
+mye1.pack(pady=10)
 
 myroot.mainloop()
