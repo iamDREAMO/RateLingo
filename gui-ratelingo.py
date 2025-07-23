@@ -921,3 +921,146 @@ if __name__ == '__main__':
     myroot.title('Login Page')
     myroot.geometry('200x150')
     myroot.mainloop()
+
+
+# delete( first, last=Name ) with Entry widget
+from tkinter import *
+
+class MydeleteEg(Tk):
+    def __init__(self):
+        super().__init__()
+        self.title('MyDelete Eg')
+        self.mye1 = Entry(self, font = ('Cambria', 14, 'bold'), width= 30, bd = 5)
+        self.mye1.pack(side=LEFT)
+        
+        self.btn1 = Button(self, text='Delete the text', command= lambda: mydelete(self, self.mye1))
+        self.btn1.pack(pady=32)
+        
+        def mydelete(self, myentry):
+            myentry.delete(first=0, last=15)
+            
+if __name__ == '__main__':
+    myroot = MydeleteEg()
+    myroot.geometry('500x100')
+    myroot.mainloop()
+    
+
+# get(), icusor(), insert() options for Entry widget
+from tkinter import *
+
+class MyCursorPosition(Tk):
+    def __init__(self):
+        super().__init__()
+        self.title('MyCursorPosition Eg.')
+        self.mye1 = Entry(self, font=('Cambria', 13, 'bold'), width=20, bd=5)
+        self.mye1.pack(side=LEFT)
+        self.mye1.focus()
+        self.mye1.insert(0, 'Demonstration')
+        self.mye1.icursor(0)
+        
+        self.btn = Button(self, text= 'Position the cursor', command=lambda: myposition(self, self.mye1))
+        self.btn.pack(pady= 32)
+        
+        def myposition(self, myentry):
+            myentry.icursor(5)
+            
+if __name__ == '__main__':
+    myroot = MyCursorPosition()
+    myroot.geometry('500x100')
+    myroot.mainloop()
+    
+
+# index(index), select_adjust()
+from tkinter import * 
+
+class MyIndex_Select_adjust(Tk):
+    def __init__(self):
+        super().__init__()
+        self.title('MyIndex and Select_adjust Eg.')
+        self.mye1 = Entry(self, font=('Cambria', 14, 'bold'), width=20, bd=5)
+        self.mye1.pack(side=LEFT)
+        self.mye1.focus()
+        self.mye1.insert(0, 'Demonstration')
+        self.mye1.icursor(0)
+        
+        self.btn = Button(self, text='Index', command=lambda: myindex(self, self.mye1))
+        self.btn.pack(pady=10)
+        
+        self.btn1 = Button(self, text='select_adjust', command=lambda: myselect_adjust(self, self.mye1))
+        self.btn1.pack(pady=10)
+        
+        def myindex(self, myentry):
+            myentry.icursor(self.mye1.index(6))
+            
+        def myselect_adjust(self, myentry):
+            myentry.select_adjust(5)
+            
+if __name__ == '__main__':
+    myroot = MyIndex_Select_adjust()
+    myroot.geometry('500x100')
+    myroot.mainloop()
+    
+    
+# xview_scroll, xview
+from tkinter import *
+
+class MyScrollbarEntry(Tk):
+    def __init__(self):
+        super().__init__()
+        mysobj_scroll = Scrollbar(self, orient='horizontal')
+        mye1 = Entry(self, xscrollcommand= mysobj_scroll.set, font=('Helvectica',13, 'bold'))
+        mye1.focus()
+        mye1.pack(side='bottom', fill=X)
+        mysobj_scroll.pack(fill=X)
+        mysobj_scroll.config(command=mye1.xview)
+        mye1.insert(0, 'You are the only one who can stop your dreams. Be very OPTIMISTIC about your dreams and pursue them with purpose!')
+        
+if __name__ == '__main__':
+    myroot = MyScrollbarEntry() 
+    myroot.geometry('500x200') 
+    myroot.mainloop() 
+    
+
+# Validation in Entry Widget
+from tkinter import *
+class MyValidate(Tk):
+    def __init__(self):
+        super().__init__()
+        self.my10 = Label(self, text='Enter the number:', fg='Magenta', font =('Cambria', 12, 'bold'))
+        self.my10.place(x=10, y=30)
+        
+        self.mye1 = Entry(self, font=('Helvetica', 13))
+        self.mye1.place(x=150, y=30)
+        
+        self.myl1 = Label(self, text='', fg='Red')
+        self.myl1.place(x=70, y=50)
+        
+        self.myreg = self.register(self.mycallback) # v1
+        self.invalidcmd = self.register(self.myinvalid_name) # v2
+        self.mye1.config(validate= "key", validatecommand=(self.myreg, '%P'), invalidcommand=(self.invalidcmd, '%S')) #v3
+        
+    def mycallback(self, myinp):
+        if myinp.isdigit(): # c1
+            print(myinp)
+            self.myl1.config(text='')
+            return True
+        
+        elif myinp is "":       # c2
+            print(myinp)
+            self.myl1.config(text='')
+            return True
+        
+        else: # c3
+            print(myinp)
+            return False
+            
+    def myinvalid_name(self, myCh):
+        self.myl1.config(text=(f'Invalid character (myCh) \n name can only have numbers'), font= ('Arial', 11, 'bold'))
+            
+if __name__ == "__main__":
+    myroot = MyValidate()
+    myroot.geometry('400x100')
+    myroot.mainloop()
+    
+    
+# tkinter Scrollbar widget
