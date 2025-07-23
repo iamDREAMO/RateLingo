@@ -1,29 +1,39 @@
 from tkinter import *
-
-class MyLogin:
-    def __init__(self, myroot):
-        self.myl1 = Label(myroot, text= 'Username')
-        self.myl1.grid(row=0, column=0)
+class MyValidate(Tk):
+    def __init__(self):
+        super().__init__()
+        self.my10 = Label(self, text='Enter the number:', fg='Magenta', font =('Cambria', 12, 'bold'))
+        self.my10.place(x=10, y=30)
         
-        self.myl2 = Label(myroot, text='Password')
-        self.myl2.grid(row=1, column=0, pady=10)
+        self.mye1 = Entry(self, font=('Helvetica', 13))
+        self.mye1.place(x=150, y=30)
         
-        self.mye1 = Entry(myroot, width=15, selectborderwidth = 3)
-        self.mye1.grid(row=0,column=1,padx=10)
+        self.myl1 = Label(self, text='', fg='Red')
+        self.myl1.place(x=70, y=50)
         
-        self.mye2 = Entry(myroot, width=15, show='*')
-        self.mye2.grid(row=1, column=1, padx=10)
+        self.myreg = self.register(self.mycallback) # v1
+        self.invalidcmd = self.register(self.myinvalid_name) # v2
+        self.mye1.config(validate= "key", validatecommand=(self.myreg, '%P'), invalidcommand=(self.invalidcmd, '%S')) #v3
         
-        def mydisplay():
-            print('The username is: ' + self.mye1.get())
-            print('The password is: ' + self.mye2.get())
+    def mycallback(self, myinp):
+        if myinp.isdigit(): # c1
+            print(myinp)
+            self.myl1.config(text='')
+            return True
+        
+        elif myinp is "":       # c2
+            print(myinp)
+            self.myl1.config(text='')
+            return True
+        
+        else: # c3
+            print(myinp)
+            return False
             
-        self.mybtn = Button(myroot, text= 'Login', command=mydisplay, font= ('Cambria', 12, 'bold'))
-        self.mybtn.grid(row=2, columnspan= 3)
-        
-if __name__ == '__main__':
-    myroot = Tk()
-    myobj = MyLogin(myroot)
-    myroot.title('Login Page')
-    myroot.geometry('200x150')
+    def myinvalid_name(self, myCh):
+        self.myl1.config(text=(f'Invalid character (myCh) \n name can only have numbers'), font= ('Arial', 11, 'bold'))
+            
+if __name__ == "__main__":
+    myroot = MyValidate()
+    myroot.geometry('400x100')
     myroot.mainloop()
