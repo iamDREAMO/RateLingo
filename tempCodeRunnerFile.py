@@ -1,33 +1,22 @@
-from tkinter import *
+from  tkinter import *
 
-class Scrollbar_Text(Tk):
+class Scrollbar_Canvas(Tk):
     def __init__(self):
         super().__init__()
         
-        self.mysclbar = Scrollbar(self) # scrollbar creation and attaching to the main window
-        self.mysclbar.pack(side=RIGHT, fill=Y) # scrollbar added to window right side
+        mycanvas = Canvas(self, width=150, height = 50)
+        mycanvas.create_oval(30, 30, 90, 90, fill='Magenta')
+        mycanvas.create_oval(300, 300, 380, 380, fill='Brown')
+        mycanvas.grid(row=0,column=0)
         
-        self.sclhbar =Scrollbar(self, orient=HORIZONTAL)
-        self.sclhbar.pack(side=BOTTOM, fill=X)
+        myscroll_x =Scrollbar(self, orient=HORIZONTAL, command=mycanvas.xview)
+        myscroll_x.grid(row=1, column=0, sticky=EW) 
+        myscroll_y = Scrollbar(self, command=mycanvas.yview)
+        myscroll_y.grid(row=0,column=1,sticky=NS)
         
-        self.mytext = Text(self, width=600, height=600, 
-                           yscrollcommand=self.mysclbar.set,
-                           xscrollcommand=self.sclhbar.set,
-                           wrap=NONE) # creation of textbox ad both horizontal/vertical scrillbars are attached to the textbox
-        self.mytext.pack(expand=0, fill=BOTH)    
+        mycanvas.config(scrollregion=mycanvas.bbox('all'))
         
-        # horizontal elements
-        for loop in range(30): # insertelements from 0 to 49 in the text
-            self.mytext.insert(END, str(loop) + '\t')
-            
-        # vertical elements
-        for loop in range(50): # insertelements from 0 to 49 in the text
-            self.mytext.insert(END, str(loop) + '\n')
-            
-        self.sclhbar.config(command=self.mytext.xview) # for need of horizontal view settings scrollbar command option to textbox.xview method
-        self.mysclbar.config(command=self.mytext.yview) # for need of horizontal view settings scrollbar command option to textbox.yview method
-        
-if __name__ == '__main__':
-    root = Scrollbar_Text()
-    root.geometry('300x300')
-    root.mainloop()    
+if __name__ =='__main__':
+    root = Scrollbar_Canvas()
+    root.geometry('300x250')
+    root.mainloop() 
