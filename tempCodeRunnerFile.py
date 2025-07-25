@@ -1,39 +1,20 @@
 from tkinter import *
-class MyValidate(Tk):
+class Scrollbar_ListBox(Tk):
     def __init__(self):
         super().__init__()
-        self.my10 = Label(self, text='Enter the number:', fg='Magenta', font =('Cambria', 12, 'bold'))
-        self.my10.place(x=10, y=30)
         
-        self.mye1 = Entry(self, font=('Helvetica', 13))
-        self.mye1.place(x=150, y=30)
+        self.mysclbar = Scrollbar(self) # scrollbar creation and attaching to the menu window
+        self.mysclbar.pack(side=RIGHT, fill='y') # scrollbar added to the window right side 
         
-        self.myl1 = Label(self, text='', fg='Red')
-        self.myl1.place(x=70, y=50)
+        self.mylstbox = Listbox(self) # listbox creation and attaching to the main window
+        self.mylstbox.config(yscrollcommand=self.mysclbar.set) # scrollbar attached to the listbox for vertical scroll used yscrollcommand
         
-        self.myreg = self.register(self.mycallback) # v1
-        self.invalidcmd = self.register(self.myinvalid_name) # v2
-        self.mye1.config(validate= "key", validatecommand=(self.myreg, '%P'), invalidcommand=(self.invalidcmd, '%S')) #v3
-        
-    def mycallback(self, myinp):
-        if myinp.isdigit(): # c1
-            print(myinp)
-            self.myl1.config(text='')
-            return True
-        
-        elif myinp is "":       # c2
-            print(myinp)
-            self.myl1.config(text='')
-            return True
-        
-        else: # c3
-            print(myinp)
-            return False
+        for loop in range(50): # insertelements from 0 to 49 in the listbox
+            self.mylstbox.insert(END, str(loop))
             
-    def myinvalid_name(self, myCh):
-        self.myl1.config(text=(f'Invalid character (myCh) \n name can only have numbers'), font= ('Arial', 11, 'bold'))
-            
-if __name__ == "__main__":
-    myroot = MyValidate()
-    myroot.geometry('400x100')
-    myroot.mainloop()
+        self.mylstbox.pack(side='left', fill=BOTH) # listbox added to the window left side
+        self.mysclbar.config(command=self.mylstbox.yview) # for need of vertical view settings scrollbar command option to listbox.yview method
+        
+if __name__ == '__main__':
+    root = Scrollbar_ListBox()
+    root.mainloop()
