@@ -1,22 +1,21 @@
-from  tkinter import *
+from tkinter import *
 
-class Scrollbar_Canvas(Tk):
+class Scrollbar_Entry(Tk):
     def __init__(self):
         super().__init__()
+        self.sclhbar = Scrollbar(self, orient=HORIZONTAL)
+        self.sclhbar.pack(side = BOTTOM, fill=X)
         
-        mycanvas = Canvas(self, width=150, height = 50)
-        mycanvas.create_oval(30, 30, 90, 90, fill='Magenta')
-        mycanvas.create_oval(300, 300, 380, 380, fill='Brown')
-        mycanvas.grid(row=0,column=0)
+        self.mye1 = Entry(self, xscrollcommand=self.sclhbar.set) # creation of entry horizontal scrollbars attached
+        self.mye1.pack(expand=0, fill=BOTH)
         
-        myscroll_x =Scrollbar(self, orient=HORIZONTAL, command=mycanvas.xview)
-        myscroll_x.grid(row=1, column=0, sticky=EW) 
-        myscroll_y = Scrollbar(self, command=mycanvas.yview)
-        myscroll_y.grid(row=0,column=1,sticky=NS)
-        
-        mycanvas.config(scrollregion=mycanvas.bbox('all'))
-        
-if __name__ =='__main__':
-    root = Scrollbar_Canvas()
-    root.geometry('300x250')
-    root.mainloop() 
+        # horizontal elements
+        for loop in range(30): # insertelements from 0 to 29 in the listbox
+            self.mye1.insert(END, str(loop) + '\t')
+            
+            self.sclhbar.config(command=self.mye1.xview)
+            
+if __name__=='__main__':
+    root = Scrollbar_Entry()
+    root.geometry('300x100')
+    root.mainloop()
