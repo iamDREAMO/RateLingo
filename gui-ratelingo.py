@@ -1169,3 +1169,16 @@ if __name__=='__main__':
     root = Scrollbar_Entry()
     root.geometry('300x100')
     root.mainloop()
+    
+    
+# tkinter Spinbox widget
+from tkinter import *
+
+root = Tk()
+root.geometry('200x200')
+root.title('SpinBox')
+
+# spinbox creation
+spin = Spinbox(font=('Cambria', 14, 'bold'), from_=10, to=20)
+spin.pack()
+root.mainloop()
