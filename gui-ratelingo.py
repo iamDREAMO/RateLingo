@@ -1182,3 +1182,5 @@ root.title('SpinBox')
 spin = Spinbox(font=('Cambria', 14, 'bold'), from_=10, to=20)
 spin.pack()
 root.mainloop()
+
+
