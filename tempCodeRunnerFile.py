@@ -1,10 +1,17 @@
-# specify set of values in spinbox
 from tkinter import *
 root = Tk()
-root.geometry('200x200')
-root.title('SpinBox Values Specified')
+root.geometry('300x300')
 
+# StringVar Variable
+stv = StringVar()
+
+# display function
+def display():
+    root.configure(bg= stv.get())
+    
 # creation of spinbox
-spin1 = Spinbox(font= ('Cambria', 14, 'bold'), values=(10,15,20,25,30), bd=10, relief= RIDGE)
-spin1.pack()
+spin = Spinbox(font= ('Cambria', 14, 'bold'), command=display,
+               values= ['Red', 'Green', 'Blue', 'Pink', 
+                        'Magenta', 'Yellow'], textvariable=stv)
+spin.pack()
 root.mainloop()
