@@ -1320,3 +1320,46 @@ text.tag_add('Tag', '1.0', '1.0 wordend')
 # Confir=guring the properties about the tag
 text.tag_configure('Tag', background='Brown')
 root.mainloop()
+
+
+# Getting Marks in the Text Widget
+from tkinter import *
+
+root = Tk()
+root.geometry('300x300')
+root.title('Mark in Text_Widget')
+
+# text widget
+text = Text(root, width=18, height=10, font=('Cambria', 12), wrap=WORD, 
+            padx=10, pady=10, bd=4, selectbackground= 'LightBlue', 
+            selectforeground= 'White')
+text.pack()
+
+text.insert('1.0', 'This is the first line')
+text.insert('1.0 + 1 line', '\nThis is the second line' )
+text.insert('1.0 + 2 lines', '\nThis is the third line')
+
+print(text.mark_names())
+root.mainloop()
+
+
+# Inserting Image in Text widget
+from tkinter import *
+root = Tk()
+
+def click():
+    text1.insert('insert',"<>")
+    
+btn = Button(root, text='Click Here!', command=click)
+btn.pack()
+
+text1 = Text(root, width=55, height=30)
+text1.pack()
+
+def insertimage():
+    text1.image_create('insert', image = image1)
+
+image1 = PhotoImage(file='Add-icon.png')
+btn1 = Button(root, text='CreateImage', command=insertimage)
+btn1.pack(pady=10)
+root.mainloop()
