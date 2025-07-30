@@ -1363,3 +1363,7 @@ image1 = PhotoImage(file='Add-icon.png')
 btn1 = Button(root, text='CreateImage', command=insertimage)
 btn1.pack(pady=10)
 root.mainloop()
+
+
+# Tkinter Combobox Widget
+
