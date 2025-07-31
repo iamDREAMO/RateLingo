@@ -2,19 +2,24 @@ from tkinter import *
 from tkinter.ttk import Combobox
 
 root = Tk()
-root.geometry('300x200')
-root.title('Text in Combobox')
+root.geometry('350x300')
+root.title('Specified Font in Combobox') 
 
-str_val = StringVar()
+# list of values
+list2 = ['Translation', 'Transcription', 'Subtitling','Voice Dubbing']
 
-def display():
-    str_val = combo.get()
-    print(str_val)
-    
-list1 = ['Ghana','Togo','Algeria','Morocco']
-str_val.set('Ghana')
+# assigning font
+font1 = ('Cambria', 12, 'bold', 'italic')
 
-combo = Combobox(root, values= list1, height=5, textvariable=str_val, postcommand=display)
-combo.pack()
+# assigning label
+lab1 = Label(root, text = 'Choose the service', font=('Cambria', 12, 'bold'))
+lab1.pack(pady=2)
 
+# combobox object
+combo = Combobox(root, values= list2, height=5, font= font1)
+combo.pack(pady= 2)
+combo.current(1)
+
+# specify font of the box of combobox
+root.option_add('*TCombobox*Listbox.font', font1)
 root.mainloop()
