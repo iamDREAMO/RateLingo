@@ -2,12 +2,13 @@ from tkinter import *
 from tkinter.ttk import Combobox
 
 root = Tk()
-root.geometry('300x200')
-root.title('Combobox Widget')
+root.geometry('350x200')
+root.title('Combobox with String as Values')
 
-# List of values
-List1 = list(range(1,10))
+# string values
+str_v = ['Translation', 'Transcription', 'Voice Over', 'Subtitling']
 
-combo = Combobox(root, values=List1, width=15)
-combo.pack(padx=40, pady=10) 
+combo1 = Combobox(root, values= str_v, height=2)
+combo1.pack()
+
 root.mainloop()
