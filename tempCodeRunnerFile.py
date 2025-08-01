@@ -1,11 +1,13 @@
-# Getting Insights of Display Widgets in tkinter
 from tkinter import *
-root = Tk()
 
-root.maxsize(300,300) # maximum size of the window set up to 300 only
-root.resizable(0,0) # fixed window size
-
-label1 = Label(root, text= 'Tkinter\nis\nAwesome', font=('Cambria', 18, 'bold'),
-               bg= 'Cyan', fg= 'Black', width= '16', height= '4')
-label1.pack()
-root.mainloop()
+class LabelPosition(Tk):
+    def __init__(self):
+        super().__init__()
+        self.title('Position Text within a Label')
+        self.label1 = Label(self, text = 'Hello! \n Welcome!', bd=4, relief = SUNKEN, 
+                           font= 'Hevectica 14', width=10, height=4, anchor= SW)
+        self.label1.pack()
+        
+if __name__ == '__main__':
+    root = LabelPosition()
+    root.mainloop()
