@@ -1459,3 +1459,6 @@ label1 = Label(root, text= 'Tkinter\nis\nAwesome', font=('Cambria', 18, 'bold'),
                bg= 'Cyan', fg= 'Black', width= '16', height= '4')
 label1.pack()
 root.mainloop()
+
+
+# Positioning text in Label Widget
