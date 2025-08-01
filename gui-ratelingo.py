@@ -1475,3 +1475,6 @@ class LabelPosition(Tk):
 if __name__ == '__main__':
     root = LabelPosition()
     root.mainloop()
+
+
+# Justify text in Label
