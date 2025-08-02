@@ -1,13 +1,26 @@
 from tkinter import *
 
-class LabelPosition(Tk):
+class Just1(Tk):
     def __init__(self):
         super().__init__()
-        self.title('Position Text within a Label')
-        self.label1 = Label(self, text = 'Hello! \n Welcome!', bd=4, relief = SUNKEN, 
-                           font= 'Hevectica 14', width=10, height=4, anchor= SW)
-        self.label1.pack()
+        self.title('Justify the Label')
+        lab1 = Label(self, text= 'KOFI')
+        lab1.pack()
+        lab2 = Label(self, text= 'Hello\nThere There\nThere There There', 
+                     bd=2, relief= 'solid', font= ('Cambria',12))
+        
+        # default justify is CENTER
+        lab2.pack()
+        lab3 = Label(self, text= 'KOFI')
+        lab3.pack()
+        lab4 = Label(self, text= 'Hello\nThere There\nThere There There', 
+                     bd=2, relief= 'solid', font= ('Cambria',12), justify = LEFT)
+        lab4.pack()
+        lab5 = Label(self, text= 'Hello\nThere There\nThere There There', 
+                     bd=2, relief= 'solid', font= ('Cambria',12), justify = RIGHT)
+        lab5.pack()
         
 if __name__ == '__main__':
-    root = LabelPosition()
+    root = Just1()
+    root.geometry('350x300')
     root.mainloop()
