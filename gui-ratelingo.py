@@ -1504,3 +1504,6 @@ if __name__ == '__main__':
     root = Just1()
     root.geometry('350x300')
     root.mainloop()
+    
+    
+# Access the options of tkinter label
