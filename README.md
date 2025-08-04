@@ -85,4 +85,4 @@ A desktop application and web app version of RateLingo will be developed soon fo
 
 ## 📬 License
 
-This project is open-source and available under the [MIT License](https://opensource.org/license/mit)..
+This project is open-source and available under the [MIT License](https://opensource.org/license/mit).
