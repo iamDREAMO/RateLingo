@@ -45,7 +45,7 @@ py RateLingo.py
 
 * Choose a service (e.g., translation, transcription, etc.).
 * Paste or type your text (multi-line supported).
-* Press `Enter` once or twice (2x) on an empty line in your device's command line (windows/mac) or vscode terminal respectively to finish input.
+* Press `Enter` once or twice (2x) on an empty line in your device's command line (windows/mac) or vscode terminal respectively to finish input..
 * View the word count and estimated service cost.
 
 ---
