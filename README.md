@@ -4,9 +4,9 @@
 
 ---
 
-## ✨ Features
+## Features
 
-- 📝 Supports four core language services:
+- Supports four core language services:
   - Translation
   - Transcription
   - Voice-over
@@ -14,11 +14,11 @@
 
 - 📊 Calculates word count from user input.
 - 💰 Computes total service cost based on predefined rates per word.
-- 💻 Runs directly in the terminal with a simple, interactive interface.
+- Runs directly in the terminal with a simple, interactive interface.
 
 ---
 
-## 🚀 How To Use RateLingo
+## How To Use RateLingo
 
 ### 1️⃣ Clone the Repository
 
@@ -51,7 +51,7 @@ py RateLingo.py
 ---
 
 
-## 📌 Predefined Rates
+## Predefined Rates
 
 | Service       | Rate per Word (USD) |
 | ------------- | ------------------- |
@@ -64,7 +64,7 @@ py RateLingo.py
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 * Python 3.x
 
@@ -72,17 +72,17 @@ No external libraries are required. Just clone and run!
 
 ---
 
-## 🌍 About
+## About
 
 **RateLingo** is developed by **[Benedict Kofi Amofah](https://github.com/iamDREAMO)** as a practical tool for language professionals. Feel free to contribute, fork, or suggest improvements!
 
 ---
 
-## 🚀 Coming Soon: 
+## Coming Soon: 
 
 A desktop application and web app version of RateLingo will be developed soon for enhanced user experience and broader accessibility...
 
 
-## 📬 License
+## License
 
 This project is open-source and available under the [MIT License](https://opensource.org/license/mit)...
