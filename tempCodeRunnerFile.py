@@ -1,26 +1,24 @@
 from tkinter import *
 
-class Just1(Tk):
+class AccessOptions(Tk):
     def __init__(self):
         super().__init__()
-        self.title('Justify the Label')
-        lab1 = Label(self, text= 'KOFI')
+        self.title('Access tkinter label options')
+        lab1 = Label(self, text= 'Stay\nSafe From\nFrom Smoking', bd = 2,
+                     bg= 'Cyan', relief = 'solid', font= ('Cambria', 12, 'bold'),
+                     width= 20, height= 4, anchor = NW, justify = LEFT)
         lab1.pack()
-        lab2 = Label(self, text= 'Hello\nThere There\nThere There There', 
-                     bd=2, relief= 'solid', font= ('Cambria',12))
-        
-        # default justify is CENTER
-        lab2.pack()
-        lab3 = Label(self, text= 'KOFI')
-        lab3.pack()
-        lab4 = Label(self, text= 'Hello\nThere There\nThere There There', 
-                     bd=2, relief= 'solid', font= ('Cambria',12), justify = LEFT)
-        lab4.pack()
-        lab5 = Label(self, text= 'Hello\nThere There\nThere There There', 
-                     bd=2, relief= 'solid', font= ('Cambria',12), justify = RIGHT)
-        lab5.pack()
+        print(lab1['text'])
+        print('-------')
+        print(lab1['bd'])
+        print(lab1['font'])
+        print(lab1['width'])
+        print(lab1['height'])
+        print(lab1['anchor'])
+        print(lab1['justify'])
         
 if __name__ == '__main__':
-    root = Just1()
-    root.geometry('350x300')
+    root = AccessOptions()
+    root.geometry('300x200')
     root.mainloop()
+    
