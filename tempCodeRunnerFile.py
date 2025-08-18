@@ -21,4 +21,3 @@ if __name__ == '__main__':
     root = AccessOptions()
     root.geometry('300x200')
     root.mainloop()
-    
