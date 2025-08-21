@@ -1,17 +1,12 @@
 from tkinter import *
+root = Tk()
+Str1 = StringVar()
 
-class StrVartext(Tk):
-    def __init__(self):
-        super().__init__()
-        self.vall = StringVar()
-        self.title('StringVar/textvariable as Tk label')
-        self.lab1 = Label(self, font =('Cambria', 12, 'bold'),
-                          textvariable = self.vall, relief = 'groove')
-        self.lab1.pack()
-        self.vall.set('Tkinter is great')
-        
-if __name__ == '__main__':
-    root = StrVartext()
-    root.geometry('300x300')
-    root.mainloop()
+# message widget object
+msg1 = Message(root, textvariable= Str1, relief=SUNKEN, font =('Arial', 12,'bold'),
+               fg = 'Cyan', bg = 'Brown')
+Str1.set('Display of string message')
+msg1.pack()
+root.geometry('200x200')
+root.mainloop()
     
