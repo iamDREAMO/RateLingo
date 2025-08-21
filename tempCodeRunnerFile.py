@@ -1,12 +1,9 @@
 from tkinter import *
 root = Tk()
-Str1 = StringVar()
 
-# message widget object
-msg1 = Message(root, textvariable= Str1, relief=SUNKEN, font =('Arial', 12,'bold'),
-               fg = 'Cyan', bg = 'Brown')
-Str1.set('Display of string message')
+text1 = 'This session is to test my knowledgr so far with tkinter'
+msg1 = Message(root, text=text1, font =('Cambria', 12, 'bold'),
+               fg="Blue", bg='Magenta', relief= RAISED)
 msg1.pack()
 root.geometry('200x200')
 root.mainloop()
-    
