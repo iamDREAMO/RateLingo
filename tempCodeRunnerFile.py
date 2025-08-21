@@ -7,3 +7,4 @@ msg1 = Message(root, text=text1, font =('Cambria', 12, 'bold'),
 msg1.pack()
 root.geometry('200x200')
 root.mainloop()
+    

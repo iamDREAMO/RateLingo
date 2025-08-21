@@ -1576,4 +1576,6 @@ root.geometry('200x200')
 root.mainloop()
     
     
+# Statusbar in Tkinter
+
 
