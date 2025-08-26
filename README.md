@@ -80,7 +80,7 @@ No external libraries are required. Just clone and run!
 
 ## Coming Soon: 
 
-A desktop application and web app version of RateLingo will be developed soon for enhanced user experience and broader accessibility......
+A desktop application and web app version of RateLingo will be developed soon for enhanced user experience and broader accessibility..
 
 
 ## License
