@@ -12,8 +12,8 @@
   - Voice-over
   - Subtitling
 
-- 📊 Calculates word count from user input.
-- 💰 Computes total service cost based on predefined rates per word.
+-  Calculates (📊) word count from user input.
+-  Computes total service cost (💰) based on predefined rates per word.
 - Runs directly in the terminal with a simple, interactive interface.
 
 ---
