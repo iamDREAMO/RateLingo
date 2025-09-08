@@ -20,14 +20,14 @@
 
 ## How To Use RateLingo
 
-### 1️⃣ Clone the Repository
+### 1 Clone the Repository
 
 ```bash
 git clone https://github.com/iamDREAMO/RateLingo.git
 cd RateLingo
 ````
 
-### 2️⃣ Run the Application
+### 2 Run the Application
 
 Make sure Python 3 is installed on your system. In your terminal or command prompt, run:
 
@@ -41,7 +41,7 @@ or
 py RateLingo.py
 ```
 
-### 3️⃣ Follow the Prompts
+### 3 Follow the Prompts
 
 * Choose a service (e.g., translation, transcription, etc.).
 * Paste or type your text (multi-line supported).
