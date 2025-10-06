@@ -1588,3 +1588,154 @@ statusbar = Label(root, text='Example of StatusBar...',
 
 statusbar.pack(side=BOTTOM, fill=X) 
 root.mainloop()
+
+
+# tkinter MessageBox Widget
+# (displays the message boxes in the python application)
+
+# showinfo()
+# (displays the relevant info to the user)
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('200x200')
+root.title('Showinfo function')
+
+def display():
+    messagebox.showinfo('showinfoexample', 'Basic showinfo example')
+btn1 = Button(root, text= 'Clickinfo', command = display)
+btn1.pack()
+root.mainloop()
+
+# showwarning()
+# (display warning message to the user)
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('200x200')
+root.title('Warningmessage')
+
+def display():
+    messagebox.showwarning('Showwarningexample', 'Basic warning message example')
+btn1 = Button(root, text = 'ClickWarningMessage', command= display)
+btn1.pack()
+root.mainloop()
+
+# showerror()
+# (display error message to the user) 
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('200x200')
+root.title('Errormessage')
+
+def display():
+    messagebox.showerror('Showerrorexample', 'Basic error message example')
+btn1= Button(root, text = 'ClickErrorMessage', command = display)
+btn1.pack()
+root.mainloop()
+
+# askquestion()
+# (display custom confirmatory questions to the user either Yes/No)
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('300x200')
+root.title('AskQuestion')
+
+def display():
+    answer = messagebox.askquestion('AskQestion example', 'Do you want to continue?')
+    if answer == 'yes':
+        messagebox.showinfo('Message', 'You have selected Yes')
+    else:
+        messagebox.showinfo('Message', 'You have selected No')
+        
+btn1 = Button(root, text= 'ClickAskMessage', command= display)
+btn1.pack()
+root.mainloop()
+
+# askokcancel()
+# (confirms the user's responses concerning the app activity)
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('300x200')
+root.title('AskOkCancel')
+
+def display():
+    messagebox.askokcancel('AskOkCancel example', 'Redirecting to www.abc.com')
+btn1 = Button(root, text= 'ClickOkCancel', command = display)
+btn1.pack()
+root.mainloop()
+
+# askyesno()
+# (questions the user to provide Yes/No answer)
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('300x300')
+root.title('AskYesNo')
+
+def display():
+    messagebox.askyesno('AskYesNo example', 'Do you want to continue the process?')
+btn1 = Button(root, text= 'ClickYesNoMessage', command= display)
+btn1.pack()
+root.mainloop()
+
+# askretrycancel
+# (ask user perform task again or not)
+from tkinter import *
+from tkinter import messagebox
+
+root = Tk()
+root.geometry('300x300')
+root.title('AskRetryCancel')
+
+def display():
+    messagebox.askretrycancel('AskRetryCancel example', 'Was the process successful?')
+btn1= Button(root, text= 'ClickRetryCancelMessage', command= display)
+btn1.pack()
+root.mainloop()
+
+
+# Insights of Container Widgets in tkinter
+# (ability to manage and organise the layout widgets in the GUI)
+
+# tkinter Frame Widget
+# (responsible for arrangement of widget positions)
+
+from tkinter import *
+
+root = Tk()
+root.geometry('300x300')
+
+frame1=Frame(root, width=150,height=150, bg='Red')
+frame1.grid(row=0, column=0)
+
+frame2=Frame(root, width=150,height=150, bg='Green')
+frame2.grid(row=1, column=0)
+
+frame3=Frame(root, width=150,height=150, bg='Blue')
+frame3.grid(row=0, column=1)
+
+frame4=Frame(root, width=150,height=150, bg='Cyan')
+frame4.grid(row=1, column=1)
+
+root.mainloop()
+
+from tkinter import *
+
+root = Tk()
+root.geometry('250x100')
+
+frame1=Frame(root)
+l1= Label(frame1, text = 'Name')
+l1.grid(row=0, column=0)
+l1= Label(frame1, text = 'Name')
+l1.grid(row=1, column=0)
