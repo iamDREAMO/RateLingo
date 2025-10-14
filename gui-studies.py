@@ -1712,8 +1712,25 @@ root.mainloop()
 
 from tkinter import *
 
+root = Tk()
+root.geometry('300x300')
+
+frame1=Frame(root, width=150,height=150, bg='Red')
+frame1.grid(row=0, column=0)
+
+frame2=Frame(root, width=150,height=150, bg='Green')
+frame2.grid(row=1, column=0)
+
+frame3=Frame(root, width=150,height=150, bg='Blue')
+frame3.grid(row=0, column=1)
+
+frame4=Frame(root, width=150,height=150, bg='Cyan')
+frame4.grid(row=1, column=1)
+
+root.mainloop()
 
 
+# Add input to the frame
 from tkinter import *
 
 root = Tk()
@@ -1740,3 +1757,44 @@ btn.grid(row=3, columnspan= 2)
 frame1.grid(row=3, column=0)
 
 root.mainloop()
+
+
+# tkinter LabelFrame Widget
+# (acts as a container to group interrelated widgets with borders)
+
+from tkinter import *
+
+class MyLabelFrame(Tk):
+    def __init__(self):
+        super().__init__()
+        
+        # assigned text for display in LabelFrame 
+        self.lf1 = LabelFrame(self, text= 'Welcome to LabelFrame and ButtonFrame',
+                              font=('Arial', 13, 'bold'), bg ='LightBlue')
+        self.lf1.pack(fill='both', expand='yes')
+        
+        # create and define label
+        self.l1 = Label(self.lf1, text= 'This is a Label', bg='Pink')
+        self.l1.pack(side=TOP)
+        
+        # create and define button
+        self.btn = Button(self.lf1, text= 'This is a Button', bg='Brown')
+        self.btn.pack(side=LEFT) 
+        
+        # create and assign text to LableFrame
+        self.lf2 = LabelFrame(self, text= 'Welcome to CheckButton and RadioButton Frame',
+                              font=('Arial', 13, 'bold'), bg ='LightGreen')
+        self.lf2.pack(fill='both', expand='yes')
+        
+        # create and define CheckButton
+        self.chkb = Checkbutton(self.lf2, text= 'This is a CheckButton', bg='Yellow')
+        self.chkb.pack(side=RIGHT) 
+        
+        # create and define RadioButton
+        self.rabtn = Radiobutton(self.lf2, text= 'This is a RadiokButton', bg='Cyan')
+        self.rabtn.pack(side=BOTTOM) 
+
+if __name__ == '__main__':
+    root = MyLabelFrame()
+    root.geometry('400x200')
+    root.mainloop()
