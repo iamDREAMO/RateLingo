@@ -1892,3 +1892,19 @@ btn = Button(root, text='Navigate', command=navigate)
 # position the button
 btn.place(x=100, y=100)
 root.mainloop()
+
+# control the stacked nature of each windows
+from tkinter import *
+
+# create main window
+root = Tk()
+root.geometry('300x300')
+root.title('Main Window')
+topobj = Toplevel(root)
+
+# create new window
+topobj.title('New Window')
+topobj.geometry('300x300')
+root.lift(topobj)
+
+root.mainloop()
