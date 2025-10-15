@@ -1908,3 +1908,21 @@ topobj.geometry('300x300')
 root.lift(topobj)
 
 root.mainloop()
+
+# control the state/visibility of the windows
+# (state: normal, iconic, withdrawn)
+from tkinter import *
+
+# create main window
+root = Tk()
+root.geometry('300x300')
+root.title('Main Window')
+topobj = Toplevel(root)
+
+# create new window
+topobj.title('New Window')
+topobj.geometry('300x300')
+topobj.lift(root)
+topobj.state('iconic')
+
+root.mainloop()
