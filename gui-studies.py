@@ -1872,3 +1872,23 @@ root.mainloop()
 
 
 # tkinter Toplevel Widget
+# (acts as Frame; contained in a window and will create/display the toplevel windows)
+
+from tkinter import *
+root = Tk()
+root.geometry('250x250')
+
+def navigate():
+    # top level object for creation of a new window
+    topobj = Toplevel(root)
+    topobj.geometry('250x250')
+    # getting the title for the window
+    topobj.title('New_Window')
+    # infinitely running mainloop
+    topobj.mainloop()
+    
+# button object for opening new window
+btn = Button(root, text='Navigate', command=navigate)
+# position the button
+btn.place(x=100, y=100)
+root.mainloop()
