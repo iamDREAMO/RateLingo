@@ -1,37 +1,20 @@
-
 from tkinter import *
+from tkinter import ttk 
 
-class MyLabelFrame(Tk):
-    def __init__(self):
-        super().__init__()
-        
-        # assigned text for display in LabelFrame 
-        self.lf1 = LabelFrame(self, text= 'Welcome to LabelFrame and ButtonFrame',
-                              font=('Arial', 13, 'bold'), bg ='LightBlue')
-        self.lf1.pack(fill='both', expand='yes')
-        
-        # create and define label
-        self.l1 = Label(self.lf1, text= 'This is a Label', bg='Pink')
-        self.l1.pack(side=TOP)
-        
-        # create and define button
-        self.btn = Button(self.lf1, text= 'This is a Button', bg='Brown')
-        self.btn.pack(side=LEFT) 
-        
-        # create and assign text to LableFrame
-        self.lf2 = LabelFrame(self, text= 'Welcome to CheckButton and RadioButton Frame',
-                              font=('Arial', 13, 'bold'), bg ='LightGreen')
-        self.lf2.pack(fill='both', expand='yes')
-        
-        # create and define CheckButton
-        self.chkb = Checkbutton(self.lf2, text= 'This is a CheckButton', bg='Yellow')
-        self.chkb.pack(side=RIGHT) 
-        
-        # create and define RadioButton
-        self.rabtn = Radiobutton(self.lf2, text= 'This is a RadiokButton', bg='Cyan')
-        self.rabtn.pack(side=BOTTOM) 
+root = Tk()
+root.title('Tab Widget Demo')
+tabcontrol = ttk.Notebook(root) # L1
 
-if __name__ == '__main__':
-    root = MyLabelFrame()
-    root.geometry('400x200')
-    root.mainloop()
+tab1 = ttk.Frame(tabcontrol) #L2
+tab2 = ttk.Frame(tabcontrol)
+
+tabcontrol.add(tab1, text = 'Tab-1') # L3
+tabcontrol.add(tab2, text = 'Tab-2')
+tabcontrol.pack(expand = 1, fill = 'both') # L4
+
+ttk.Label(tab1, text = 'This is Tab1', 
+font= ('Helvetica', 12, 'bold')).grid(column=0, row=0, padx= 50, pady=50) # L5
+ttk.Label(tab2, text = 'This explains the how tabs work in tkinter', 
+font= ('Calibri', 12, 'bold')).grid(column=0, row=0, padx= 50, pady=50)
+
+root.mainloop()
