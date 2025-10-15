@@ -1943,7 +1943,7 @@ def myget():
         
 # create ListBox with specified width and height
 lb1 = Listbox(root, width= 30, height= 15, 
-                bg='Green', font=('Arial', 12), selectmode = BROWSE)
+                bg='Cyan', font=('Arial', 12, 'bold'), selectmode = BROWSE)
 
 # insert one or more lines into ListBox
 lb1.insert(1, 'Translation')
@@ -1951,7 +1951,8 @@ lb1.insert(2, 'Subtitling')
 lb1.insert(3, 'Transcription')
 lb1.pack()    # corrected the error in the code in the book for fig 7.1
 
-mybtn = Button(root, text='Line number display', command=myget)
+mybtn = Button(root, text='Line number display', 
+               font=('Arial', 12, 'bold'), command=myget)
 mybtn.pack()
 
 root.mainloop()
