@@ -1926,3 +1926,33 @@ topobj.lift(root)
 topobj.state('iconic')
 
 root.mainloop()
+
+
+# Insights of Item Widgets in tkinter
+# (user gets to  select items from a list display using the Listbox)
+from tkinter import *
+
+root = Tk()
+root.geometry('400x400')
+root.title('A ListBox')
+
+def myget():
+    linenumber = lb1.curselection() # get the line number
+    for loop in linenumber:
+        print(loop, ':', lb1.get(loop)) # get item of that line number
+        
+# create ListBox with specified width and height
+lb1 = Listbox(root, width= 30, height= 15, 
+                bg='Green', font=('Arial', 12), selectmode = BROWSE)
+
+# insert one or more lines into ListBox
+lb1.insert(1, 'Translation')
+lb1.insert(2, 'Subtitling')
+lb1.insert(3, 'Transcription')
+lb1.pack()    # corrected the error in the code in the book for fig 7.1
+
+mybtn = Button(root, text='Line number display', command=myget)
+mybtn.pack()
+
+root.mainloop()
+
