@@ -1957,3 +1957,21 @@ mybtn.pack()
 
 root.mainloop()
 
+
+# Insights of Interactive Widgets in tkinter
+# (users have the ability to design intuitive GUIs)
+# tkinter Menu Widget
+# (a top-level menu displayed under the parent window's title bar)
+from tkinter import *
+
+root = Tk()
+def greet():      # called when Welcome! menu item is clicked
+    print('Akwaaba!')
+    
+menu = Menu(root) # create a toplevel menu
+menu.add_command(label = 'Akwaaba!', command=greet) # add menu items to main menu
+menu.add_command(label = 'Quit!', command =root.quit) # will close GUI
+root.config(menu = menu) # display of menu
+
+root.mainloop()
+
