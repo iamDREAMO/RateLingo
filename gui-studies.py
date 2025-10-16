@@ -1975,3 +1975,18 @@ root.config(menu = menu) # display of menu
 
 root.mainloop()
 
+# change the label of an item in the menu using entryconfig()
+from tkinter import *
+root = Tk()
+menu_bar = Menu(root)
+
+def selected(menu):
+    menu.entryconfig(1, label= "Selected!")
+    
+edit_menu = Menu(menu_bar, tearoff=0)
+edit_menu.add_command(label= "Demo1", command=lambda: selected(edit_menu))
+
+menu_bar.add_cascade(label= "Edit", menu=edit_menu)
+root.config(menu=menu_bar)
+
+root.mainloop()
