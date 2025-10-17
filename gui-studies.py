@@ -2039,3 +2039,20 @@ menubutton.menu.add_checkbutton(label = 'Waakye', font=('Cambria', 12, 'bold'),
                                 variable = IntVar())
 menubutton.pack()
 root.mainloop()
+
+
+# tkinter Canvas Widget
+# (allows user to draw structured graphics; line, shapes, ect in the app)
+from tkinter import *
+root = Tk()
+root.geometry('300x300')
+root.title('Create a Line')
+
+# create canvas drawing area
+canv1 = Canvas(root, width= 250, height= 250, bg ='Cyan')
+canv1.pack()
+
+# draw two lines
+line1 = canv1.create_line(0,0,200,150) # l2 (x1, y1, x2, y2)
+line2 = canv1.create_line(200,150,0,200, fill = 'red') 
+root.mainloop()
