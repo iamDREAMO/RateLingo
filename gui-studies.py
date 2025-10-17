@@ -2089,3 +2089,6 @@ canvas = obj.create_polygon(canvas)
 canvas.pack()
 # Start the mainloop
 obj.mainloop()
+
+
+# Handling File Selection in tkinter
