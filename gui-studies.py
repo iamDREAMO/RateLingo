@@ -1990,3 +1990,27 @@ menu_bar.add_cascade(label= "Edit", menu=edit_menu)
 root.config(menu=menu_bar)
 
 root.mainloop()
+
+
+# tkinter Menubutton Widget
+# (a drop-down menu part shown to the user to make choices)
+from tkinter import *
+root = Tk()
+root.geometry('350x350')
+root.title('MenuButton Widget')
+
+# create menu button with speicied options
+game_list = Menubutton(root, text= 'Games', font=('Cambria', 12, 'bold'),
+                       justify=CENTER, relief='groove')
+
+# create the drop down menu to be visible when clicked
+games = Menu(game_list)
+game_list.config(menu=games)
+
+# add commands to the drop down menu
+games.add_command(label='Ampe')
+games.add_command(label='Mirikatuo')
+games.add_command(label='Antoakyire')
+game_list.pack()
+
+root.mainloop()
