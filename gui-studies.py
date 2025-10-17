@@ -2043,6 +2043,8 @@ root.mainloop()
 
 # tkinter Canvas Widget
 # (allows user to draw structured graphics; line, shapes, ect in the app)
+
+# draw lines in canvas
 from tkinter import *
 root = Tk()
 root.geometry('300x300')
@@ -2056,3 +2058,34 @@ canv1.pack()
 line1 = canv1.create_line(0,0,200,150) # l2 (x1, y1, x2, y2)
 line2 = canv1.create_line(200,150,0,200, fill = 'red') 
 root.mainloop()
+
+# draw polygon in tkinter
+from tkinter import *
+class CreatePolygon(Frame):
+    def __init__(self, root=None):
+        # myroot object is initialised
+        super().__init__(root) # Calling Frame.__init__(myroot)
+        self.root = root # Update the myroot object after Frame() makes necessary changes to it
+
+    def createCanvas(self, canvas_width, canvas_height):
+      # Creatingcanvas object
+        canvas = Canvas(self.root, bg='LightBlue', 
+                          width=canvas_width, height=canvas_height)
+        return canvas
+    
+    def create_polygon(self, canvas):
+        points = [100,200,200,100,250,350,100,200]
+        canvas.create_polygon(points,fill = 'Yellow', 
+                                outline = 'Red', width = 2) # polygon creation
+        return canvas
+# Create our myroot object to the Application
+root = Tk()
+root.title('polygoncreation')
+# creating create_polygon object
+obj = CreatePolygon(root=root)
+canvas = obj.createCanvas(400, 400)
+canvas = obj.create_polygon(canvas)
+# The items are packed into the canvas
+canvas.pack()
+# Start the mainloop
+obj.mainloop()
