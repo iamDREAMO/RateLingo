@@ -2132,3 +2132,5 @@ btn1 = Button(root, text = 'Open File', font= ('Arial', 12, 'bold'),
 btn1.pack(pady = 20)
 root.mainloop()
 
+
+# askopenfilename function
