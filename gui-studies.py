@@ -2107,7 +2107,7 @@ def display():
     root.display = askdirectory()
     
 btn1 = Button(root, text = 'Open Directory', font= ('Arial', 12, 'bold'), 
-              command = display)
+              command = display) 
 btn1.pack(pady = 20)
 root.mainloop()
 
