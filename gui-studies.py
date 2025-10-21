@@ -2111,3 +2111,24 @@ btn1 = Button(root, text = 'Open Directory', font= ('Arial', 12, 'bold'),
 btn1.pack(pady = 20)
 root.mainloop()
 
+
+# askopenfile function
+from tkinter import *
+from tkinter.filedialog import askopenfile
+
+root = Tk()
+root.geometry('250x250')
+root.title('Open file')
+
+# askopenfile
+def open_file():
+    file1 = askopenfile(mode = 'r', filetypes =[('All Python Files', '*.py')])
+    if file1 is not None:
+        content = file1.read() # read all the file contents
+        print(file1.name)      # display all the file names
+        
+btn1 = Button(root, text = 'Open File', font= ('Arial', 12, 'bold'), 
+              command = open_file) 
+btn1.pack(pady = 20)
+root.mainloop()
+
