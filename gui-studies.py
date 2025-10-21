@@ -2092,3 +2092,22 @@ obj.mainloop()
 
 
 # Handling File Selection in tkinter
+# (through filedialog user with options to display, save and modify files in the app)
+
+# askdirectory function
+from tkinter import *
+from tkinter.filedialog import askdirectory
+
+root = Tk()
+root.geometry('250x250')
+root.title('Ask Directory')
+
+# askdirectory
+def display():
+    root.display = askdirectory()
+    
+btn1 = Button(root, text = 'Open Directory', font= ('Arial', 12, 'bold'), 
+              command = display)
+btn1.pack(pady = 20)
+root.mainloop()
+
