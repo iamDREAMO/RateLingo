@@ -2134,3 +2134,19 @@ root.mainloop()
 
 
 # askopenfilename function
+from tkinter import *
+from tkinter.filedialog import askopenfilename
+
+root = Tk()
+root.geometry('300x300')
+root.title('Open_File_Name')
+
+# askopenfilename
+def open_file():
+    file1 = askopenfilename()
+    print(file1)      # displaythe file names
+        
+btn1 = Button(root, text = 'Open File Name', font= ('Arial', 12, 'bold'), 
+              command = open_file) 
+btn1.pack(pady = 20)
+root.mainloop()
