@@ -2150,3 +2150,26 @@ btn1 = Button(root, text = 'Open File Name', font= ('Arial', 12, 'bold'),
               command = open_file) 
 btn1.pack(pady = 20)
 root.mainloop()
+
+
+# askopenfilenames function
+from tkinter import *
+from tkinter.filedialog import askopenfilenames
+
+root = Tk()
+root.geometry('300x300')
+root.title('Open_File_Names')
+
+# askopenfilename
+def open_files():
+    file_lists = []
+    files1 = askopenfilenames(initialdir= 'E:\\RateLingo', 
+                              title= 'Select Python files') 
+    for file in files1:
+        file.lists.append(file)
+    print(file_lists)      
+        
+btn1 = Button(root, text = 'Open File Names', font= ('Arial', 12, 'bold'), 
+              command = open_files) 
+btn1.pack(pady = 20)
+root.mainloop()
