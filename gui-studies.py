@@ -2193,3 +2193,7 @@ c_btn = Button(root, text= 'Choose Color', font= ('Arial', 12, 'bold'),
 c_btn.pack(pady= 40)
 root.geometry('300x300')
 root.mainloop()
+
+
+# Getting Widget Information and Trace in tkinter
+# (allows developer to get insights and trace information about the app)
