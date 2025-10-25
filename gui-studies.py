@@ -2173,3 +2173,23 @@ btn1 = Button(root, text = 'Open File Names', font= ('Arial', 12, 'bold'),
               command = open_files) 
 btn1.pack(pady = 20)
 root.mainloop()
+
+
+# colorchooser function
+from tkinter import *
+from tkinter.colorchooser import *
+
+def click1():
+    (rgb1, color1) = askcolor(title= 'Select Color') # returns a tuple
+    print(rgb1)
+    print(color1)
+    root.configure(background=color1)
+    
+root = Tk()
+root.title('Color Picker')
+
+c_btn = Button(root, text= 'Choose Color', font= ('Arial', 12, 'bold'),
+               command = click1)
+c_btn.pack(pady= 40)
+root.geometry('300x300')
+root.mainloop()
