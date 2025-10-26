@@ -2234,3 +2234,11 @@ root.mainloop()
 
 
 # winfo_geometry():
+from tkinter import *
+root = Tk()
+root.geometry('250x250+400+800')
+
+root.update()
+print(root.winfo_geometry())
+
+root.mainloop()
