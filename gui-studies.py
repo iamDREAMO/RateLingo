@@ -2289,3 +2289,30 @@ btn2 = Button(root, text= 'Button', command= x_y_methods, bg = 'Brown')
 btn2.pack(pady= 10)
 root.geometry('200x100')
 root.mainloop()
+
+
+
+# TRACE in tkinter
+# (allows user to track variables in the app with observer attached
+# to the callback variable)
+
+# trace_add(), trace_remove(), trace_info()
+from tkinter import *
+root = Tk()
+root.title('Trace_add')
+root.geometry('300x300')
+value = StringVar()
+
+btn1 = Button(root, textvariable = value, bg = 'Magenta')
+btn1.pack(padx = 20, pady = 20)
+
+ent1 = Entry(root, textvariable = value, bg = 'Cyan')
+ent1.pack(padx = 20, pady = 20)
+
+# define the callback function
+def attachedcallback(var, indx, mode):
+    print("Traced variable{}: ".format(value.get()))
+    
+# register the observer
+value.trace_add('write', attachedcallback)
+root.mainloop()
