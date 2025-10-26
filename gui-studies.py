@@ -2316,3 +2316,7 @@ def attachedcallback(var, indx, mode):
 # register the observer varible
 value.trace_add('write', attachedcallback)
 root.mainloop()
+
+
+# END OF THE TKINTER STUDIES
+# NOW UNTO BUILDING PROJECTS FOR DEEP DIVES
