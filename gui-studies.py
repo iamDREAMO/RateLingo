@@ -2299,6 +2299,7 @@ root.mainloop()
 # trace_add(), trace_remove(), trace_info()
 from tkinter import *
 root = Tk()
+
 root.title('Trace_add')
 root.geometry('300x300')
 value = StringVar()
