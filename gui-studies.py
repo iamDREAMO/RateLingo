@@ -2275,3 +2275,17 @@ btn3.pack(pady= 20)
 
 root.geometry('200x300')
 root.mainloop()
+
+
+# winfo_x() and winfo_y()
+from tkinter import *
+root = Tk()
+
+def x_y_methods():
+    print(btn2.winfo_x())
+    print(btn2.winfo_y())
+    
+btn2 = Button(root, text= 'Button', command= x_y_methods, bg = 'Brown')
+btn2.pack(pady= 10)
+root.geometry('200x100')
+root.mainloop()
