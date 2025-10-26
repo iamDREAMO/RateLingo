@@ -2233,7 +2233,7 @@ for loop in root.winfo_children():
 root.mainloop()
 
 
-# winfo_geometry():
+# winfo_geometry()
 from tkinter import *
 root = Tk()
 root.geometry('250x250+400+800')
@@ -2241,4 +2241,37 @@ root.geometry('250x250+400+800')
 root.update()
 print(root.winfo_geometry())
 
+root.mainloop()
+
+
+# winfo_ismapped()
+from tkinter import *
+root = Tk()
+
+def forget(widget):
+    widget.forget()
+    print(f"Is {widget['text']} mapped after calling forget method ? = ",
+          bool(widget.winfo_ismapped()))
+    
+def retrieve(widget):
+    widget.pack()
+    
+    # will check if widget exists or not
+    print(f"Is {widget['text']} mapped after calling forget retrieval ? = ",
+          bool(widget.winfo_exists()))
+    
+btn1 = Button(root, text= 'B1', bg = 'Green')
+btn1.pack(pady = 20)
+
+# create invisible widget
+btn2 = Button(root, text = 'B2', command= lambda: forget(btn1), 
+              bg= 'LightBlue')
+btn2.pack(pady= 20)
+
+# Retrieving widget
+btn3 = Button(root, text = 'B2', command= lambda: retrieve(btn1), 
+              bg= 'Pink')
+btn3.pack(pady= 20)
+
+root.geometry('200x300')
 root.mainloop()
