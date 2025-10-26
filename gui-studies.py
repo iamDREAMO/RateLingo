@@ -2210,3 +2210,27 @@ canv1.update()
 
 print('After packing and update width is: ' + str(canv1.winfo_width()))
 print('After packing and update height is: ' + str(canv1.winfo_height()))
+
+
+# winfo_children
+from tkinter import *
+root = Tk()
+root.geometry('250x250')
+
+ent1 = Entry(root)
+ent1.pack(pady = 20)
+
+btn1 = Button(root, text='Button')
+btn1.pack(pady = 20)
+
+lab1 = Label(root, text= 'Label')
+lab1.pack(pady = 20)
+
+# iterate each child widget of the parent window and disable them
+for loop in root.winfo_children():
+    loop.config(state='disable')
+
+root.mainloop()
+
+
+# winfo_geometry():
