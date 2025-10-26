@@ -2313,6 +2313,6 @@ ent1.pack(padx = 20, pady = 20)
 def attachedcallback(var, indx, mode):
     print("Traced variable{}: ".format(value.get()))
     
-# register the observer
+# register the observer varible
 value.trace_add('write', attachedcallback)
 root.mainloop()
