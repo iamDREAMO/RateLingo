@@ -2197,3 +2197,16 @@ root.mainloop()
 
 # Getting Widget Information and Trace in tkinter
 # (allows developer to get insights and trace information about the app)
+
+# winfo_width and winfo_height
+from tkinter import *
+root = Tk()
+
+canv1 = Canvas(root, width = 300, height = 320)
+print('Before packing width is: ' + str(canv1.winfo_width()))
+print('Before packing height is: ' + str(canv1.winfo_height()))
+canv1.pack()
+canv1.update()
+
+print('After packing and update width is: ' + str(canv1.winfo_width()))
+print('After packing and update height is: ' + str(canv1.winfo_height()))
