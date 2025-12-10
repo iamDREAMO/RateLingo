@@ -1,4 +1,4 @@
-# RateLingo.
+# RateLingo...
 
 **RateLingo** is a simple, command-line application built with Python that helps translators, transcribers, voice-over artists, and subtitlers estimate costs based on word count. It is designed especially for professionals offering Twi language services eg; **Twi-English translation, transcription, voice-overs, and subtitling/captions**.
 
