@@ -5,8 +5,8 @@ Modern Tkinter interface for RateLingo
 
 from tkinter import *
 from tkinter import ttk, messagebox, scrolledtext
-from core import ServiceRates, WordCounter, PricingCalculator
-import database as db
+from src.core import ServiceRates, WordCounter, PricingCalculator
+from src import database as db
 
 
 class RateLingoGUI:
