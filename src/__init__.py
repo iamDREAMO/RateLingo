@@ -8,5 +8,6 @@ __author__ = "Benedict Kofi Amofah"
 __email__ = "benedictkofiamofah@gmail.com"
 
 from src.core import ServiceRates, WordCounter, PricingCalculator
+from src import database
 
-__all__ = ['ServiceRates', 'WordCounter', 'PricingCalculator']
+__all__ = ['ServiceRates', 'WordCounter', 'PricingCalculator', 'database']
