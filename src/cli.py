@@ -3,7 +3,7 @@ RateLingo CLI Module
 Command-line interface for RateLingo
 """
 
-from src.core import ServiceRates, WordCounter, PricingCalculator
+from core import ServiceRates, WordCounter, PricingCalculator
 
 
 class CLI:
