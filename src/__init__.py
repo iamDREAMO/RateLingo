@@ -5,7 +5,7 @@ A professional tool for freelance language service providers
 
 __version__ = "1.0.0"
 __author__ = "Benedict Kofi Amofah"
-__email__ = "your.email@example.com"
+__email__ = "benedictkofiamofah@gmail.com"
 
 from src.core import ServiceRates, WordCounter, PricingCalculator
 
