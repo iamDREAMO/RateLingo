@@ -4,7 +4,7 @@ Entry point for the application
 """
 
 import sys
-from src.cli import main as cli_main
+from cli import main as cli_main
 
 if __name__ == "__main__":
     # Check if GUI mode is requested (for future GUI implementation)
