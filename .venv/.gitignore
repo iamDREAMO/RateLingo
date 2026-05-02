@@ -1,7 +1,5 @@
 ratelingo.db
 __pycache__/
-venv
 tkinter_gui_studies.py
-
-
+*.pyc
 
