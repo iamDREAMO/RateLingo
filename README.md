@@ -83,6 +83,4 @@ No external libraries are required. Just clone and run!
 A desktop application and web app version of RateLingo will be developed soon for enhanced user experience and broader accessibility.
 
 
-## License
 
-This project is open-source and available under the [MIT License](https://opensource.org/license/mit).
