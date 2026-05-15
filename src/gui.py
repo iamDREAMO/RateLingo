@@ -98,7 +98,7 @@ class RateLingoGUI:
             header,
             text="v1.0",
             font=('Segoe UI', 9),
-            bg=self.COLORS['accent'],
+            bg=self.COLORS['bg_dark'],
             fg=self.COLORS['white'],
             padx=8,
             pady=3
