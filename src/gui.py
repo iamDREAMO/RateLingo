@@ -29,10 +29,24 @@ class RateLingoGUI:
     
     def __init__(self, root):
         self.root = root
-        self.root.title("RateLingo - Professional Pricing Calculator")
-        self.root.geometry
+        self.root.title("RateLingo - Language Service Pricing Calculator")
         self.root.minsize(900, 450)
         
+         # Window dimensions
+        win_width = 1020
+        win_height = 750
+        
+        # Get screen dimensions
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        
+        # Calculate center position
+        x = (screen_width // 2) - (win_width // 2)
+        y = (screen_height // 2) - (win_height // 2)
+        
+        # Apply geometry with centered position
+        self.root.geometry(f"{win_width}x{win_height}+{x}+{y}")
+               
         # Initialize database
         db.create_tables()
         
