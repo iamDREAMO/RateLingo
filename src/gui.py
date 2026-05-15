@@ -69,7 +69,7 @@ class RateLingoGUI:
     
     def create_header(self):
         """Create application header"""
-        header = Frame(self.root, bg=self.COLORS['primary'], height=80)
+        header = Frame(self.root, bg=self.COLORS['primary'], height=120)
         header.pack(fill=X, side=TOP)
         header.pack_propagate(False)
         
@@ -81,7 +81,7 @@ class RateLingoGUI:
             bg=self.COLORS['primary'],
             fg=self.COLORS['white']
         )
-        title_label.pack(side=LEFT, padx=30, pady=10)
+        title_label.pack(side=LEFT, padx=30, pady=15)
         
         # Subtitle
         subtitle = Label(
@@ -91,7 +91,7 @@ class RateLingoGUI:
             bg=self.COLORS['primary'],
             fg=self.COLORS['secondary']
         )
-        subtitle.place(x=30, y=65)
+        subtitle.place(x=30, y=85)
         
         # Version badge
         version = Label(
