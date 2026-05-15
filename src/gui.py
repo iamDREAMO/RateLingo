@@ -33,8 +33,8 @@ class RateLingoGUI:
         self.root.minsize(900, 450)
         
          # Window dimensions
-        win_width = 1020
-        win_height = 750
+        win_width = 1030
+        win_height = 800
         
         # Get screen dimensions
         screen_width = self.root.winfo_screenwidth()
@@ -69,7 +69,7 @@ class RateLingoGUI:
     
     def create_header(self):
         """Create application header"""
-        header = Frame(self.root, bg=self.COLORS['primary'], height=120)
+        header = Frame(self.root, bg=self.COLORS['primary'], height=110)
         header.pack(fill=X, side=TOP)
         header.pack_propagate(False)
         
@@ -81,17 +81,17 @@ class RateLingoGUI:
             bg=self.COLORS['primary'],
             fg=self.COLORS['white']
         )
-        title_label.pack(side=LEFT, padx=30, pady=15)
+        title_label.pack(side=LEFT, padx=30)
         
         # Subtitle
         subtitle = Label(
             header,
             text="Professional Language Service Pricing Calculator",
-            font=('Segoe UI', 11),
+            font=('Segoe UI', 11, 'bold'),
             bg=self.COLORS['primary'],
             fg=self.COLORS['secondary']
         )
-        subtitle.place(x=30, y=85)
+        subtitle.place(x=30, y=80)
         
         # Version badge
         version = Label(
