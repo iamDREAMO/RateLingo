@@ -30,8 +30,8 @@ class RateLingoGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("RateLingo - Professional Pricing Calculator")
-        self.root.geometry("1000x650")
-        self.root.minsize(900, 600)
+        self.root.geometry
+        self.root.minsize(900, 450)
         
         # Initialize database
         db.create_tables()
