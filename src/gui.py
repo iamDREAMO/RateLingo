@@ -81,7 +81,7 @@ class RateLingoGUI:
             bg=self.COLORS['primary'],
             fg=self.COLORS['white']
         )
-        title_label.pack(side=LEFT, padx=30, pady=15)
+        title_label.pack(side=LEFT, padx=30, pady=10)
         
         # Subtitle
         subtitle = Label(
@@ -91,7 +91,7 @@ class RateLingoGUI:
             bg=self.COLORS['primary'],
             fg=self.COLORS['secondary']
         )
-        subtitle.place(x=30, y=50)
+        subtitle.place(x=30, y=65)
         
         # Version badge
         version = Label(
