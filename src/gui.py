@@ -16,7 +16,7 @@ class RateLingoGUI:
     COLORS = {
         'primary': '#7C3AED',      # Violet
         'secondary': '#A78BFA',    # Light purple
-        'accent': '#F59E0B',       # Amber
+        'dark_blue': '#006CA5',       # Amber
         'bg_light': '#F9FAFB',     # Light gray
         'bg_dark': '#1F2937',      # Dark gray
         'text_dark': '#111827',    # Almost black
@@ -138,10 +138,11 @@ class RateLingoGUI:
         clear_btn = Button(
             header,
             text="Clear",
-            font=('Segoe UI', 9),
-            bg=self.COLORS['bg_light'],
-            fg=self.COLORS['text_light'],
-            relief=FLAT,
+            font=('Segoe UI', 10, 'bold',),
+            bg=self.COLORS['dark_blue'],
+            fg=self.COLORS['white'],
+            width= 7,
+            relief= RAISED,
             cursor='hand2',
             command=self.clear_text
         )
