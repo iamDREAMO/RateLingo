@@ -357,7 +357,7 @@ class RateLingoGUI:
             action_frame,
             text="Save Quote",
             font=('Segoe UI', 10, 'bold'),
-            bg=self.COLORS['bg_light'],
+            bg=self.COLORS['dark_blue'],
             fg=self.COLORS['text_dark'],
             relief=FLAT,
             cursor='hand2',
