@@ -370,7 +370,7 @@ class RateLingoGUI:
         Button(
             action_frame,
             text="View History",
-            font=('Segoe UI', 10),
+            font=('Segoe UI', 10, 'bold'),
             bg=self.COLORS['bg_light'],
             fg=self.COLORS['text_dark'],
             relief=FLAT,
