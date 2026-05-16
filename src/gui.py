@@ -373,7 +373,7 @@ class RateLingoGUI:
             font=('Segoe UI', 10, 'bold'),
             bg=self.COLORS['dark_blue'],
             fg=self.COLORS['white'],
-            relief=FLAT,
+            relief=RAISED,
             width= 5,
             cursor='hand2',
             command=self.view_history,
