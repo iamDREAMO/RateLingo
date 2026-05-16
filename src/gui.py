@@ -77,7 +77,7 @@ class RateLingoGUI:
         title_label = Label(
             header,
             text="RateLingo",
-            font=('Segoe UI', 28, 'bold'),
+            font=('Segoe UI', 30, 'bold'),
             bg=self.COLORS['primary'],
             fg=self.COLORS['white']
         )
@@ -128,8 +128,8 @@ class RateLingoGUI:
         
         Label(
             header,
-            text="📝 Your Text",
-            font=('Segoe UI', 14, 'bold'),
+            text="📋 Your Text",
+            font=('Segoe UI', 16, 'bold',),
             bg=self.COLORS['white'],
             fg=self.COLORS['text_dark']
         ).pack(side=LEFT)
