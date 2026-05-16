@@ -360,7 +360,7 @@ class RateLingoGUI:
             bg=self.COLORS['dark_blue'],
             fg=self.COLORS['white'],
             relief=RAISED,
-            width= 7,
+            width= 5,
             cursor='hand2',
             command=self.save_quote,
             padx=15,
