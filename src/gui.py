@@ -374,6 +374,7 @@ class RateLingoGUI:
             bg=self.COLORS['dark_blue'],
             fg=self.COLORS['white'],
             relief=FLAT,
+            width= 5,
             cursor='hand2',
             command=self.view_history,
             padx=15,
