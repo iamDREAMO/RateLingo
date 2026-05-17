@@ -292,7 +292,7 @@ class RateLingoGUI:
             text="Rate per Word",
             font=('Segoe UI', 11, 'bold'),
             bg=self.COLORS['bg_light'],
-            fg=self.COLORS['text_light']
+            fg=self.COLORS['text_dark']
         ).pack(anchor=W)
         
         self.rate_label = Label(
