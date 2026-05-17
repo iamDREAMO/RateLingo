@@ -33,7 +33,7 @@ class RateLingoGUI:
         self.root.minsize(900, 450)
         
          # Window dimensions
-        win_width = 1030
+        win_width = 1050
         win_height = 800
         
         # Get screen dimensions
