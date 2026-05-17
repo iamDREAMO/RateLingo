@@ -272,7 +272,7 @@ class RateLingoGUI:
         self.service_desc = Label(
             service_frame,
             text="",
-            font=('Segoe UI', 9),
+            font=('Segoe UI', 9, 'italic', 'bold',),
             bg=self.COLORS['white'],
             fg=self.COLORS['text_light'],
             wraplength=320,
