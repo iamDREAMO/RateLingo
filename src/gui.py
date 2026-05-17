@@ -198,7 +198,7 @@ class RateLingoGUI:
         Label(
             count_frame,
             text="Characters:",
-            font=('Segoe UI', 10),
+            font=('Segoe UI', 10, 'bold'),
             bg=self.COLORS['white'],
             fg=self.COLORS['text_light']
         ).pack(side=LEFT)
