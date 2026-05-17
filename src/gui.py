@@ -225,7 +225,7 @@ class RateLingoGUI:
         Label(
             header,
             text="💼 Service & Pricing",
-            font=('Segoe UI', 14, 'bold'),
+            font=('Segoe UI', 16, 'bold'),
             bg=self.COLORS['white'],
             fg=self.COLORS['text_dark']
         ).pack(side=LEFT)
