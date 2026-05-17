@@ -19,7 +19,7 @@ class RateLingoGUI:
         'dark_blue': '#006CA5',       # Amber
         'bg_light': '#F9FAFB',     # Light gray
         'bg_dark': '#1F2937',      # Dark gray
-        'agreable_gray': '#D1CBC1',   # Agreeable gray for panels
+        'agreeable_gray': '#D1CBC1',   # Agreeable gray for panels
         'text_dark': '#111827',    # Almost black
         'text_light': '#6B7280',   # Gray
         'white': '#FFFFFF',
@@ -282,10 +282,10 @@ class RateLingoGUI:
         self.service_desc.pack(anchor=W, pady=(8, 0))
         
         # Rate display
-        rate_frame = Frame(right_panel, bg=self.COLORS['agreable_gray'])
+        rate_frame = Frame(right_panel, bg=self.COLORS['agreeable_gray'])
         rate_frame.pack(fill=X, padx=20, pady=20)
         
-        rate_inner = Frame(rate_frame, bg=self.COLORS['agreable_gray'])
+        rate_inner = Frame(rate_frame, bg=self.COLORS['agreeable_gray'])
         rate_inner.pack(fill=X, padx=15, pady=15)
         
         Label(
