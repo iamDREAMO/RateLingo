@@ -537,7 +537,7 @@ class HistoryWindow:
         
         Label(
             header,
-            text="📊💾📋 Quote History",
+            text="💾 Quote History",
             font=('Segoe UI', 16, 'bold'),
             bg=RateLingoGUI.COLORS['primary'],
             fg=RateLingoGUI.COLORS['white']
