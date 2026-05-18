@@ -282,7 +282,10 @@ class RateLingoGUI:
         self.service_desc.pack(anchor=W, pady=(8, 0))
         
         # Rate display
-        rate_frame = Frame(right_panel, relief=FLAT, bd=2, highlightthickness=2, bg=self.COLORS['agreeable_gray'])
+        rate_frame = Frame(right_panel, relief=FLAT, bd=0.5,
+                           highlightthickness=0.5,  
+                           highlightbackground=self.COLORS['text_light'], 
+                           bg=self.COLORS['agreeable_gray'])
         rate_frame.pack(fill=X, padx=20, pady=10)
         
         rate_inner = Frame(rate_frame, bg=self.COLORS['agreeable_gray'])
