@@ -8,15 +8,15 @@ class ServiceRates:
     
     SERVICES = {
         "translation": {
-            "rate": 0.25,
+            "rate": 0.08,
             "description": "Twi-English translation services"
         },
         "transcription": {
-            "rate": 0.10,
+            "rate": 0.05,
             "description": "Audio/video to text transcription"
         },
         "voiceover": {
-            "rate": 0.15,
+            "rate": 0.20,
             "description": "Professional voice-over recording"
         },
         "subtitling": {
