@@ -318,13 +318,13 @@ class RateLingoGUI:
             font=('Segoe UI', 12, 'bold'),
             bg=self.COLORS['primary'],
             fg=self.COLORS['white'],
-            relief=FLAT,
+            relief=RAISED,
             cursor='hand2',
             command=self.calculate_cost,
             activebackground=self.COLORS['secondary'],
             activeforeground=self.COLORS['white'],
-            padx=20,
-            pady=15
+            padx=10,
+            pady=10
         )
         self.calc_button.pack(fill=X)
         
