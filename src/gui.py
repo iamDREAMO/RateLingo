@@ -347,7 +347,7 @@ class RateLingoGUI:
                            highlightthickness=1,  
                            highlightbackground=self.COLORS['text_light'], 
                            bg=self.COLORS['success'])
-        cost_display.pack(fill=X, pady=10,)
+        cost_display.pack(fill=X, pady=15,)
         
         self.cost_label = Label(
             cost_display,
@@ -357,7 +357,7 @@ class RateLingoGUI:
             fg=self.COLORS['white'],
             anchor=CENTER
         )
-        self.cost_label.pack(pady=15)
+        self.cost_label.pack(pady=10)
         
         # Action buttons
         action_frame = Frame(right_panel, bg=self.COLORS['white'])
