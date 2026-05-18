@@ -283,7 +283,7 @@ class RateLingoGUI:
         
         # Rate display
         rate_frame = Frame(right_panel, bg=self.COLORS['agreeable_gray'])
-        rate_frame.pack(fill=X, padx=20, pady=20)
+        rate_frame.pack(fill=X, padx=20, pady=10)
         
         rate_inner = Frame(rate_frame, bg=self.COLORS['agreeable_gray'])
         rate_inner.pack(fill=X, padx=15, pady=15)
@@ -299,7 +299,7 @@ class RateLingoGUI:
         self.rate_label = Label(
             rate_inner,
             text="$0.00",
-            font=('Segoe UI', 20, 'bold'),
+            font=('Segoe UI', 13, 'bold'),
             bg=self.COLORS['agreeable_gray'],
             fg=self.COLORS['primary']
         )
