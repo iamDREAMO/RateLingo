@@ -399,7 +399,7 @@ class RateLingoGUI:
         
         Label(
             footer,
-            text="© 2025 RateLingo by Benedict Kofi Amofah",
+            text="© 2026 RateLingo by Benedict Kofi Amofah",
             font=('Segoe UI', 9),
             bg=self.COLORS['bg_dark'],
             fg=self.COLORS['text_light']
