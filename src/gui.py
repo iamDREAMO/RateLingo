@@ -407,7 +407,7 @@ class RateLingoGUI:
         
         Label(
             footer,
-            text="Made for Twi Language Professionals",
+            text="Made for Language Professionals",
             font=('Segoe UI', 9),
             bg=self.COLORS['bg_dark'],
             fg=self.COLORS['text_light']
@@ -537,7 +537,7 @@ class HistoryWindow:
         
         Label(
             header,
-            text="📊 Quote History",
+            text="📊💾📋 Quote History",
             font=('Segoe UI', 16, 'bold'),
             bg=RateLingoGUI.COLORS['primary'],
             fg=RateLingoGUI.COLORS['white']
