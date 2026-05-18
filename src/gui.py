@@ -5,6 +5,7 @@ Modern Tkinter interface for RateLingo
 
 from tkinter import *
 from tkinter import ttk, messagebox, scrolledtext
+import customtkinter as ctk
 from src.core import ServiceRates, WordCounter, PricingCalculator
 from src import database as db
 
@@ -319,12 +320,12 @@ class RateLingoGUI:
             bg=self.COLORS['primary'],
             fg=self.COLORS['white'],
             relief=RAISED,
-            width= 10,
+            width= 9,
             cursor='hand2',
             command=self.calculate_cost,
             activebackground=self.COLORS['secondary'],
             activeforeground=self.COLORS['white'],
-            padx=10,
+            padx=15,
             pady=5
 
         )
