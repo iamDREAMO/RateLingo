@@ -310,7 +310,7 @@ class RateLingoGUI:
         
         # Calculate button
         calc_frame = Frame(right_panel, bg=self.COLORS['white'])
-        calc_frame.pack(fill=X, padx=20, pady=10)
+        calc_frame.pack(fill=X, padx=15, pady=10)
         
         self.calc_button = Button(
             calc_frame,
@@ -323,8 +323,7 @@ class RateLingoGUI:
             command=self.calculate_cost,
             activebackground=self.COLORS['secondary'],
             activeforeground=self.COLORS['white'],
-            padx=10,
-            pady=10
+            pady=10,
         )
         self.calc_button.pack(fill=X)
         
