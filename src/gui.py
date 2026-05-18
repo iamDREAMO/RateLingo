@@ -310,7 +310,7 @@ class RateLingoGUI:
         
         # Calculate button
         calc_frame = Frame(right_panel, bg=self.COLORS['white'])
-        calc_frame.pack(fill=X, padx=20, pady=5)
+        calc_frame.pack(fill=X, padx=20, pady=10)
         
         self.calc_button = Button(
             calc_frame,
@@ -337,21 +337,25 @@ class RateLingoGUI:
         Label(
             results_frame,
             text="Total Cost",
-            font=('Segoe UI', 11, 'bold'),
+            font=('Segoe UI', 12, 'bold'),
             bg=self.COLORS['white'],
             fg=self.COLORS['text_dark']
         ).pack(anchor=W, pady=(0, 8))
         
         # Cost display
-        cost_display = Frame(results_frame, bg=self.COLORS['success'], relief=FLAT)
-        cost_display.pack(fill=X, ipady=20)
+        cost_display = Frame(results_frame,  relief=FLAT, bd=1,
+                           highlightthickness=1,  
+                           highlightbackground=self.COLORS['text_light'], 
+                           bg=self.COLORS['success'])
+        cost_display.pack(fill=X, ipady=10)
         
         self.cost_label = Label(
             cost_display,
             text="$0.00",
-            font=('Segoe UI', 32, 'bold'),
+            font=('Segoe UI', 16, 'bold',),
             bg=self.COLORS['success'],
-            fg=self.COLORS['white']
+            fg=self.COLORS['white'],
+            anchor=CENTER
         )
         self.cost_label.pack()
         
