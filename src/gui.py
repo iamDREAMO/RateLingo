@@ -286,7 +286,7 @@ class RateLingoGUI:
         rate_frame.pack(fill=X, padx=20, pady=10)
         
         rate_inner = Frame(rate_frame, bg=self.COLORS['agreeable_gray'])
-        rate_inner.pack(fill=X, padx=15, pady=15)
+        rate_inner.pack(fill=X, padx=5, pady=5)
         
         Label(
             rate_inner,
