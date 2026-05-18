@@ -604,12 +604,12 @@ class HistoryWindow:
         self.tree.heading('Rate', text='Rate')
         self.tree.heading('Total', text='Total Cost')
         
-        self.tree.column('ID', width=50)
-        self.tree.column('Date', width=150)
-        self.tree.column('Service', width=120)
-        self.tree.column('Words', width=100)
-        self.tree.column('Rate', width=100)
-        self.tree.column('Total', width=120)
+        self.tree.column('ID', width=50, anchor='center')
+        self.tree.column('Date', width=150, anchor='center')
+        self.tree.column('Service', width=120, anchor='center')
+        self.tree.column('Words', width=100, anchor='center')
+        self.tree.column('Rate', width=100, anchor='center')
+        self.tree.column('Total', width=120, anchor='center')
         
         self.tree.pack(fill=BOTH, expand=True)
         scrollbar.config(command=self.tree.yview)
