@@ -15,7 +15,7 @@ class CLI:
     def print_header(self):
         """Display application header"""
         print("\n" + "=" * 60)
-        print("  RateLingo - Twi Language Service Pricing Calculator")
+        print("  RateLingo - Professional Language Service Pricing Calculator")
         print("=" * 60)
         print()
     
