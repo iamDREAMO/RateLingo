@@ -121,11 +121,9 @@ RateLingo/
 │   ├── cli.py               # CLI interface
 │   ├── gui.py               # GUI interface (CustomTkinter)
 │   └── database.py          # SQLite3 quote history
-├
 │   
 ├── main.py                  # Entry point
-├── pyproject.toml           # Project metadata
-└── 
+└── pyproject.toml           # Project metadata
 ```
 
 ---
