@@ -14,6 +14,29 @@
 
 ---
 
+## The Story Behind RateLingo
+
+With over 5 years of experience as a freelance Twi-English language specialist 
+covering translation, transcription, subtitling, voice-over, interpretation, 
+data annotation, and data collection, one recurring challenge was pricing 
+text-based projects quickly and accurately.
+
+Every quote request meant opening a text editor or visiting an online word 
+counter, cross-referencing customised rates, and manually calculating costs — 
+a workflow that introduced delays. In cases where internet access was 
+unavailable, responding to urgent client quote requests before work could begin 
+became a bottleneck entirely.
+
+Toward the end of my fourth year in the role, the idea for a dedicated tool 
+began to take shape. Starting with a manual sketch of the desired interface and 
+drawing on a background in Python development, research pointed to Tkinter and 
+PyQt as viable options for building desktop applications. This became the 
+motivation to learn Tkinter — and RateLingo is the result: a practical tool 
+born out of a real professional need, and proudly my second desktop application 
+built with Tkinter.
+
+---
+
 ## Overview
 
 RateLingo is a desktop pricing calculator built for freelance language service providers. It calculates accurate project quotes based on word (texts) count across translation, transcription, voice-over, and subtitling services. Available as both a GUI desktop app and a CLI tool.
@@ -78,8 +101,8 @@ Follow the prompts to select a service, enter your text, and view your quote.
 | Service       | Rate per Word |
 |---------------|---------------|
 | Translation   | $0.08         |
-| Transcription | $0.04         |
-| Voice-over    | $0.15         |
+| Transcription | $0.05         |
+| Voice-over    | $0.20         |
 | Subtitling    | $0.12         |
 
 *Rates are configurable in `src/core.py`*
@@ -115,15 +138,12 @@ RateLingo/
 - Word counting and cost calculation
 - Quote history with SQLite3
 
-### v2.0 (Coming Soon)
-- [ ] Export quotes to PDF/CSV
-- [ ] Custom rate profiles per client
-- [ ] Character-based pricing option
-- [ ] Invoice generation
-
-### v3.0 (Future)
+### v2.0 (Future)
+- [ ] Cross-platform packaging (Windows `.exe`, linux `ELF format`, macOS `.app`)
+- [ ] Export quotes to PDF
 - [ ] Web application version
-- [ ] Cross-platform packaging (Windows `.exe`, macOS `.app`, linux `.app`, )
+- [ ] Custom rate profiles per client
+- [ ] Invoice generation
 
 ---
 
