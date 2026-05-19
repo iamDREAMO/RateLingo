@@ -1,7 +1,47 @@
 [project]
 name = "RateLingo"
 version = "1.0.0"
-description = "Add your description here"
+description = "A professional pricing calculator for Twi language services"
+authors = [
+    {name = "Benedict Kofi Amofah", email = "benedictkofiamofah@gmail.com"}
+]
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["translation", "transcription", "pricing", "freelance", "twi", "language-services"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/iamDREAMO/RateLingo"
+Repository = "https://github.com/iamDREAMO/RateLingo"
+Issues = "https://github.com/iamDREAMO/RateLingo/issues"
+
+[project.scripts]
+ratelingo = "main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-data]
+src = ["*.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
