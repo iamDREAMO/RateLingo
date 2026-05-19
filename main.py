@@ -1,5 +1,5 @@
 """
-RateLingo - Twi Language Service Pricing Calculator
+RateLingo - Professional Language Service Pricing Calculator
 Entry point for the application
 
 Usage:
