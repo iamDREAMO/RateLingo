@@ -1,7 +1,7 @@
 [project]
 name = "RateLingo"
 version = "1.0.0"
-description = "A professional pricing calculator for Twi language services"
+description = "A professional pricing calculator for language services"
 authors = [
     {name = "Benedict Kofi Amofah", email = "benedictkofiamofah@gmail.com"}
 ]
