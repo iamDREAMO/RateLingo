@@ -22,7 +22,7 @@ class RateLingoGUI:
         'agreeable_gray': '#D1CBC1',   # Agreeable gray for panels
         'text_dark': '#111827',    # Almost black
         'text_light': '#6B7280',   # Gray
-        'white': '#FFFFFF',
+        'white': '#FFFFFF',        # White    
         'success': '#10B981',      # Green
         'error': '#EF4444',        # Red
         'border': '#E5E7EB'        # Light border
