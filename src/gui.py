@@ -20,7 +20,7 @@ class RateLingoGUI:
         'bg_light': '#F9FAFB',     # Light gray
         'bg_dark': '#1F2937',      # Dark gray
         'agreeable_gray': '#D1CBC1',   # Agreeable gray for panels
-        'text_dark': '#111827',    # Almost black
+        'text_dark': '#111827',    # Black
         'text_light': '#6B7280',   # Gray
         'white': '#FFFFFF',        # White    
         'success': '#10B981',      # Green
