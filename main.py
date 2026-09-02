@@ -4,7 +4,7 @@ Entry point for the application
 
 Usage:
     python main.py          # Launches GUI (default)
-    python main.py --cli    # Launches CLI
+    python main.py --cli    # Launches CLI (Alternative Command-Line Interface)
 """
 
 import sys
