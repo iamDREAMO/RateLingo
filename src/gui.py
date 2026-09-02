@@ -16,7 +16,7 @@ class RateLingoGUI:
     COLORS = {
         'primary': '#7C3AED',      # Violet
         'secondary': '#A78BFA',    # Light purple
-        'dark_blue': '#006CA5',       # Amber
+        'dark_blue': '#006CA5',    # Amber
         'bg_light': '#F9FAFB',     # Light gray
         'bg_dark': '#1F2937',      # Dark gray
         'agreeable_gray': '#D1CBC1',   # Agreeable gray for panels
