@@ -134,7 +134,7 @@ RateLingo/
 - CLI interface
 - GUI desktop app
 - Word counting and cost calculation
-- Quote history with SQLite3
+- Quote history with SQLite3.
 
 ### v2.0 (Future)
 - [ ] Cross-platform packaging (Windows `.exe`, linux `ELF format`, macOS `.app`)
