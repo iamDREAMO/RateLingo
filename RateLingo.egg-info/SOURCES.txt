@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+RateLingo.egg-info/PKG-INFO
+RateLingo.egg-info/SOURCES.txt
+RateLingo.egg-info/dependency_links.txt
+RateLingo.egg-info/entry_points.txt
+RateLingo.egg-info/top_level.txt
+src/__init__.py
+src/cli.py
+src/core.py
+src/database.py
+src/gui.py
